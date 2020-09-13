@@ -22,5 +22,19 @@ namespace Vistas
         {
             InitializeComponent();
         }
+
+        private void btnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            WinLogin menuLogin = new WinLogin();
+            menuLogin.Show();
+            this.Close();
+        }
+
+        private void btnClientes_Click(object sender, RoutedEventArgs e)
+        {
+            WinAltaCliente oAltaCliente = new WinAltaCliente();
+            oAltaCliente.Show();
+            this.Close();
+        }
     }
 }
