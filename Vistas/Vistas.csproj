@@ -58,6 +58,9 @@
     <Compile Include="WinAltaCliente.xaml.cs">
       <DependentUpon>WinAltaCliente.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinAltaPelicula.xaml.cs">
+      <DependentUpon>WinAltaPelicula.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinLogin.xaml.cs">
       <DependentUpon>WinLogin.xaml</DependentUpon>
     </Compile>
@@ -72,6 +75,10 @@
       <DependentUpon>WinMenuVendedor.xaml</DependentUpon>
     </Compile>
     <Page Include="WinAltaCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinAltaPelicula.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

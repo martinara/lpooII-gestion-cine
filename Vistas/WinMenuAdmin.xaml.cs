@@ -29,5 +29,12 @@ namespace Vistas
             menuLogin.Show();
             this.Close();
         }
+
+        private void btnPeliculas_Click(object sender, RoutedEventArgs e)
+        {
+            WinAltaPelicula oAltaPelicula = new WinAltaPelicula();
+            oAltaPelicula.Show();
+            this.Close();
+        }
     }
 }
