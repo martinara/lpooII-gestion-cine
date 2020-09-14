@@ -20,3 +20,5 @@ c:\users\martin\documents\visual studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x8
 c:\users\martin\documents\visual studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x86\Debug\WinAltaCliente.g.cs
 c:\users\martin\documents\visual studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x86\Debug\WinAltaPelicula.baml
 c:\users\martin\documents\visual studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x86\Debug\WinAltaPelicula.g.cs
+c:\users\martin\documents\visual studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x86\Debug\WinElegirButaca.baml
+c:\users\martin\documents\visual studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x86\Debug\WinElegirButaca.g.cs

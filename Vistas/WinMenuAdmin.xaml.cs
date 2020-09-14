@@ -36,5 +36,12 @@ namespace Vistas
             oAltaPelicula.Show();
             this.Close();
         }
+
+        private void btnButacas_Click(object sender, RoutedEventArgs e)
+        {
+            WinElegirButaca oElegirButaca = new WinElegirButaca();
+            oElegirButaca.Show();
+            this.Close();
+        }
     }
 }
