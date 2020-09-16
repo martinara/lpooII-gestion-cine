@@ -77,6 +77,14 @@
     <Compile Include="WinMenuVendedor.xaml.cs">
       <DependentUpon>WinMenuVendedor.xaml</DependentUpon>
     </Compile>
+    <Page Include="EstilosGenerales.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PlantillasGenerales.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WinAltaCliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
