@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     
     <Style TargetType="TextBox" x:Key="EstilosTxtClientes">
-        <Setter Property="FontSize" Value="13"></Setter>
+        <Setter Property="FontSize" Value="15"></Setter>
         <Setter Property="FontWeight" Value="Bold"></Setter>
         <Setter Property="Background" Value="Transparent"></Setter>
         <Setter Property="Foreground" Value="White"></Setter>
@@ -14,6 +14,20 @@
         <Setter Property="Foreground" Value="White"></Setter>
         <Setter Property="FontWeight" Value="Bold"></Setter>
         <Setter Property="Background" Value="#FF3131B8"></Setter>
-        
+        <!-- TRIGGER PUNTO 3-->
+        <Style.Triggers>           
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="FontSize" Value="23"></Setter>
+                <Setter Property="Width" Value="200"></Setter>
+                <Setter Property="FontWeight" Value="Bold"></Setter>
+                <Setter Property="Foreground" Value="Red"></Setter>
+            </Trigger>
+            
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" Value="Green"></Setter>
+            </Trigger>
+        </Style.Triggers>
     </Style>
+      
+    
 </ResourceDictionary>
