@@ -40,7 +40,7 @@
                 <Label Name="lblPelicula" Content="Pelicula" Foreground="White" Margin="0,10,0,0"/>
                 <TextBox Name="txtPelicula" Margin="0,0,0,0" Style="{StaticResource ResourceKey=EstiloTxb}"/>
                 <Label Name="lblFecha" Content="Fecha" Foreground="White" Margin="0,10,0,0"/>
-                <TextBox Name="txtFecha" Margin="0,0,0,0" Style="{StaticResource ResourceKey=EstiloTxb}"/>
+                <DatePicker Name="dtFecha" Style="{StaticResource ResourceKey=EstiloDpk}"></DatePicker>
                 <Label Name="lblHorario" Content="Horario" Foreground="White" Margin="0,10,0,0"/>
                 <TextBox Name="txtHorario" Margin="0,0,0,0" Style="{StaticResource ResourceKey=EstiloTxb}"/>
                 <Label Name="lblSala" Content="Sala" Foreground="White" Margin="0,10,0,0"/>

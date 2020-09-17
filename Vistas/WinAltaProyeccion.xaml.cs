@@ -55,7 +55,7 @@ namespace Vistas
             if (result == MessageBoxResult.Yes)
             {
                 Proyeccion oProyeccion = new Proyeccion();
-                oProyeccion.Pro_Fecha = txtFecha.Text;
+                oProyeccion.Pro_Fecha = dtFecha.Text;
                 oProyeccion.Pro_Hora = txtHorario.Text;
                 String pelicula = txtPelicula.Text;
                 String sala = txtSala.Text;
@@ -77,7 +77,6 @@ namespace Vistas
         private void LimpiarCamposPelicula()
         {
             txtPelicula.Clear();
-            txtFecha.Clear();
             txtHorario.Clear();
             txtSala.Clear();
         }
