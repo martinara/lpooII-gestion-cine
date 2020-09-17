@@ -31,9 +31,9 @@ namespace Vistas
             oVendedor.Usu_Username = "vendedor";
             oVendedor.Usu_Password = "vendedor";
 
-            String pass = pwbPassword.Password.ToString();
+            String pass = login.Username;
 
-            if(txtUsuario.Text.Equals(oAdmin.Usu_Username) && pass.Equals(oAdmin.Usu_Password))
+            if(login.Username.Equals(oAdmin.Usu_Username) && pass.Equals(oAdmin.Usu_Password))
             {
                 WinMenuAdmin menuAdmin = new WinMenuAdmin();
                 menuAdmin.Show();
@@ -41,7 +41,7 @@ namespace Vistas
             }
             else
             {
-                if(txtUsuario.Text.Equals(oVendedor.Usu_Username) && pass.Equals(oVendedor.Usu_Password))
+                if (login.Username.Equals(oVendedor.Usu_Username) && pass.Equals(oVendedor.Usu_Password))
                 {
                     WinMenuVendedor menuVendedor = new WinMenuVendedor();
                     menuVendedor.Show();

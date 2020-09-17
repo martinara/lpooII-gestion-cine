@@ -43,5 +43,12 @@ namespace Vistas
             oElegirButaca.Show();
             this.Close();
         }
+
+        private void btnProyecciones_Click(object sender, RoutedEventArgs e)
+        {
+            WinAltaProyeccion oAltaProyeccion = new WinAltaProyeccion();
+            oAltaProyeccion.Show();
+            this.Close();
+        }
     }
 }

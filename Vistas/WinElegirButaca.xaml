@@ -26,7 +26,7 @@
                     <MenuItem Header="Usuarios" Name="btnUsuarios" FontSize="20"/>
                     <MenuItem Header="Peliculas" Name="btnPeliculas" FontSize="20" Click="btnPeliculas_Click" />
                     <MenuItem Header="Butacas" Name="btnButacas" FontSize="20" Click="btnButacas_Click" />
-                    <MenuItem Header="Proyecciones" Name="btnProyecciones" FontSize="20"/>
+                    <MenuItem Header="Proyecciones" Name="btnProyecciones" FontSize="20" Click="btnProyecciones_Click" />
                     <MenuItem Header="Cerrar Sesion" Name="btnLogout" FontSize="20" Click="btnLogout_Click" />
                 </Menu>
 

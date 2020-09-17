@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\App.xaml
-6-708730244
+10483100908
 
-10-1824367693
+12337840442
 13-856578830
-WinAltaCliente.xaml;WinAltaPelicula.xaml;WinElegirButaca.xaml;WinLogin.xaml;WinMenuAdmin.xaml;WinMenuVendedor.xaml;
+controlUsuario\Login.xaml;estilosYplantillas\EstilosGenerales.xaml;estilosYplantillas\PlantillasGenerales.xaml;WinAltaCliente.xaml;WinAltaPelicula.xaml;WinAltaProyeccion.xaml;WinElegirButaca.xaml;WinLogin.xaml;WinMenuAdmin.xaml;WinMenuVendedor.xaml;
 
 False
 

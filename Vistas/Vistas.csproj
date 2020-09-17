@@ -55,11 +55,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="controlUsuario\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinAltaCliente.xaml.cs">
       <DependentUpon>WinAltaCliente.xaml</DependentUpon>
     </Compile>
     <Compile Include="WinAltaPelicula.xaml.cs">
       <DependentUpon>WinAltaPelicula.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinAltaProyeccion.xaml.cs">
+      <DependentUpon>WinAltaProyeccion.xaml</DependentUpon>
     </Compile>
     <Compile Include="WinElegirButaca.xaml.cs">
       <DependentUpon>WinElegirButaca.xaml</DependentUpon>
@@ -77,11 +83,27 @@
     <Compile Include="WinMenuVendedor.xaml.cs">
       <DependentUpon>WinMenuVendedor.xaml</DependentUpon>
     </Compile>
+    <Page Include="controlUsuario\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="estilosYplantillas\EstilosGenerales.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="estilosYplantillas\PlantillasGenerales.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WinAltaCliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WinAltaPelicula.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinAltaProyeccion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
