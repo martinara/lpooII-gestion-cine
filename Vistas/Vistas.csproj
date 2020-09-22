@@ -58,9 +58,6 @@
     <Compile Include="controlUsuario\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="nuevo.xaml.cs">
-      <DependentUpon>nuevo.xaml</DependentUpon>
-    </Compile>
     <Compile Include="WinAltaCliente.xaml.cs">
       <DependentUpon>WinAltaCliente.xaml</DependentUpon>
     </Compile>
@@ -95,10 +92,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="estilosYplantillas\PlantillasGenerales.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="nuevo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -169,6 +162,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\logo-menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icono-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icono-pass.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
