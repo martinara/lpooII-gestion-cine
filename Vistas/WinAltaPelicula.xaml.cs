@@ -43,8 +43,8 @@ namespace Vistas
                 Pelicula oPelicula = new Pelicula();
                 oPelicula.Pel_Titulo = txtTitulo.Text;
                 oPelicula.Pel_Duracion = int.Parse(txtDuracion.Text);
-                String genero = txtGenero.Text;
-                String clasificacion = txtClasificacion.Text;
+                String genero = cbxGenero.SelectedValue.ToString();
+                String clasificacion = cbxClasificacion.SelectedValue.ToString();
 
                 MessageBox.Show("Se guardaron los siguiente datos: \n" +
                     "\n TITULO: " + oPelicula.Pel_Titulo +
@@ -64,8 +64,8 @@ namespace Vistas
         {
             txtTitulo.Clear();
             txtDuracion.Clear();
-            txtGenero.Clear();
-            txtClasificacion.Clear();
+            cbxGenero.SelectedItem = null;
+            cbxClasificacion.SelectedItem = null;
         }
 
         private void btnButacas_Click(object sender, RoutedEventArgs e)

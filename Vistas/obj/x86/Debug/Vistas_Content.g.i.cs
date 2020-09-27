@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icono-pass.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("comboboxs/generos.xml")]
 
 

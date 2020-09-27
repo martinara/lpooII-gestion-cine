@@ -31,3 +31,7 @@ C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x8
 C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x86\Debug\estilosYplantillas\PlantillasGenerales.baml
 C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x86\Debug\WinAltaProyeccion.baml
 C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x86\Debug\WinAltaProyeccion.g.cs
+C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\bin\Debug\cines.mdf
+C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\bin\Debug\cines_log.ldf
+C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x86\Debug\WinPeliculas.baml
+C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x86\Debug\WinPeliculas.g.cs

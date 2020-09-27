@@ -7,20 +7,22 @@ namespace ClasesBase
 {
     public class Pelicula
     {
-        private int cla_Id;
+        private string pel_Clasificacion;
 
-        public int Cla_Id
+        public string Pel_Clasificacion
         {
-            get { return cla_Id; }
-            set { cla_Id = value; }
+            get { return pel_Clasificacion; }
+            set { pel_Clasificacion = value; }
         }
-        private int gen_Id;
 
-        public int Gen_Id
+        private string pel_Genero;
+
+        public string Pel_Genero
         {
-            get { return gen_Id; }
-            set { gen_Id = value; }
+            get { return pel_Genero; }
+            set { pel_Genero = value; }
         }
+
         private int pel_Id;
 
         public int Pel_Id

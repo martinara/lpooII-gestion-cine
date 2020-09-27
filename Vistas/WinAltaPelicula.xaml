@@ -35,6 +35,13 @@
             <Separator></Separator>
 
             <StackPanel Margin="300,20,300,20">
+
+                <!-- Recurso para cargar los comboboxs -->
+                <StackPanel.Resources>
+                    <XmlDataProvider x:Key="combo_genero" Source="/comboboxs/Generos.xml" XPath="/generos"/>
+                    <XmlDataProvider x:Key="combo_clasificacion" Source="/comboboxs/Clasificaciones.xml" XPath="/clasificaciones"/>
+                </StackPanel.Resources>
+                
                 <Label Name="lblTitulo" Content="ALTA DE PELICULA" Foreground="White" FontSize="20" HorizontalAlignment="Center"/>
                 <Separator></Separator>
                 <Label Name="lblTituloPeli" Content="Titulo" Foreground="White" Margin="0,10,0,0"/>
@@ -42,9 +49,9 @@
                 <Label Name="lblDuracion" Content="Duracion" Foreground="White" Margin="0,10,0,0"/>
                 <TextBox Name="txtDuracion" Margin="0,0,0,0" Style="{StaticResource ResourceKey=EstiloTxb}"/>
                 <Label Name="lblGenero" Content="Genero" Foreground="White" Margin="0,10,0,0"/>
-                <TextBox Name="txtGenero" Margin="0,0,0,0" Style="{StaticResource ResourceKey=EstiloTxb}"/>
+                <ComboBox Name="cbxGenero" Margin="0,0,0,0" ItemsSource="{Binding Source={StaticResource combo_genero},XPath=tipo/@name}"/>
                 <Label Name="lblClasificacion" Content="Clasificacion" Foreground="White" Margin="0,10,0,0"/>
-                <TextBox Name="txtClasificacion" Margin="0,0,0,0" Style="{StaticResource ResourceKey=EstiloTxb}"/>
+                <ComboBox Name="cbxClasificacion" Margin="0,0,0,0" ItemsSource="{Binding Source={StaticResource combo_clasificacion},XPath=tipo/@name}"/>
                 <Label Name="lblError" Foreground="Red" Margin="0,10,0,0"/>
                 <Button Name="btnRegistrar" Content="Registrar" Margin="60,10,60,0" Click="btnRegistrar_Click" Style="{StaticResource ResourceKey=PlantillaBtn}"/>
             </StackPanel>

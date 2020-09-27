@@ -83,6 +83,9 @@
     <Compile Include="WinMenuVendedor.xaml.cs">
       <DependentUpon>WinMenuVendedor.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinPeliculas.xaml.cs">
+      <DependentUpon>WinPeliculas.xaml</DependentUpon>
+    </Compile>
     <Page Include="controlUsuario\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -120,6 +123,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WinMenuVendedor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinPeliculas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -168,6 +175,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\icono-pass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="comboboxs\Clasificaciones.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="comboboxs\Generos.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
