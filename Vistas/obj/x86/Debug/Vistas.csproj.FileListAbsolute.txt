@@ -35,3 +35,40 @@ C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\bin\De
 C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\bin\Debug\cines_log.ldf
 C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x86\Debug\WinPeliculas.baml
 C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x86\Debug\WinPeliculas.g.cs
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\Vistas.exe
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\Vistas.pdb
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\bin\Debug\cines.mdf
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\bin\Debug\cines_log.ldf
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\bin\Debug\Vistas.exe
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\bin\Debug\Vistas.pdb
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\bin\Debug\ClasesBase.dll
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\bin\Debug\ClasesBase.pdb
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\Vistas.csprojResolveAssemblyReference.cache
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\controlUsuario\Login.baml
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\estilosYplantillas\EstilosGenerales.baml
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\estilosYplantillas\PlantillasGenerales.baml
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\WinAltaCliente.baml
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\WinAltaPelicula.baml
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\WinAltaProyeccion.baml
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\WinElegirButaca.baml
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\WinMenuAdmin.baml
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\WinMenuVendedor.baml
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\WinPeliculas.baml
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\App.baml
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\controlUsuario\Login.g.cs
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\WinAltaCliente.g.cs
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\WinAltaPelicula.g.cs
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\WinAltaProyeccion.g.cs
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\WinElegirButaca.g.cs
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\WinLogin.g.cs
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\WinMenuAdmin.g.cs
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\WinMenuVendedor.g.cs
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\WinPeliculas.g.cs
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\App.g.cs
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\Vistas_MarkupCompile.cache
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\Vistas_MarkupCompile.lref
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\WinLogin.baml
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\Vistas.g.resources
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
