@@ -55,21 +55,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="cinesDataSet1.Designer.cs">
+    <Compile Include="cinesDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>cinesDataSet1.xsd</DependentUpon>
+      <DependentUpon>cinesDataSet2.xsd</DependentUpon>
     </Compile>
-    <Compile Include="controlador\TrabajarPeliculas.cs" />
-    <Compile Include="controlador\TrabajarUsuarios.cs" />
     <Compile Include="modelo\Butaca.cs" />
-    <Compile Include="cinesDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>cinesDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="modelo\Cliente.cs" />
     <Compile Include="modelo\Pelicula.cs" />
+    <Compile Include="modelo\Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -81,30 +75,21 @@
     <Compile Include="modelo\Sala.cs" />
     <Compile Include="modelo\Ticket.cs" />
     <Compile Include="modelo\Usuario.cs" />
+    <Compile Include="TrabajarPeliculas.cs" />
+    <Compile Include="TrabajarUsuarios.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="cinesDataSet.xsc">
-      <DependentUpon>cinesDataSet.xsd</DependentUpon>
+    <None Include="cinesDataSet2.xsc">
+      <DependentUpon>cinesDataSet2.xsd</DependentUpon>
     </None>
-    <None Include="cinesDataSet.xsd">
+    <None Include="cinesDataSet2.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>cinesDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>cinesDataSet2.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="cinesDataSet.xss">
-      <DependentUpon>cinesDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="cinesDataSet1.xsc">
-      <DependentUpon>cinesDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="cinesDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>cinesDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="cinesDataSet1.xss">
-      <DependentUpon>cinesDataSet1.xsd</DependentUpon>
+    <None Include="cinesDataSet2.xss">
+      <DependentUpon>cinesDataSet2.xsd</DependentUpon>
     </None>
     <None Include="modelo\DiagramaClases.cd" />
     <None Include="Properties\Settings.settings">
@@ -145,13 +130,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="cines.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="cines_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>cines.mdf</DependentUpon>
-    </Content>
+    <Folder Include="controlador\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

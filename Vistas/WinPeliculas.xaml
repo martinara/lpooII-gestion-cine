@@ -8,7 +8,7 @@
 
     <!-- Recurso para enlace de datos con la BD -->
     <Window.Resources>
-        <ObjectDataProvider MethodName="listarPeliculas" x:Key="listar_peliculas"/>
+        <ObjectDataProvider ObjectType="{x:Type svc:TrabajarPeliculas}" MethodName="listarPeliculas" x:Key="listar_peliculas"/>
     </Window.Resources>
 
     <Grid>
@@ -41,19 +41,21 @@
             <Separator></Separator>
             
             <Grid>
-                <ListView>
+                <ListView Name="Peliculas" ItemsSource="{Binding Source={StaticResource listar_peliculas}}">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn/>
-                            <GridViewColumn/>
-                            <GridViewColumn/>
-                            <GridViewColumn/>
-                            <GridViewColumn/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path= PEL_titulo}"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=PEL_clasificacion}"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path= PEL_duracion}"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path= PEL_genero}"/>
+                           
                         </GridView>
                     </ListView.View>
                 </ListView>
             </Grid>
-
+            <Button Content="Button" Height="23" Name="button1" Width="75" />
+            <Button Content="Button" Height="23" Name="button2" Width="75" />
+            <Button Content="Button" Height="23" Name="button3" Width="75" />
         </StackPanel>
 
     </Grid>

@@ -5,7 +5,7 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Data;
 
-namespace ClasesBase.controlador
+namespace ClasesBase
 {
     public class TrabajarPeliculas
     {
@@ -14,13 +14,19 @@ namespace ClasesBase.controlador
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.cinesConnectionString);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM sp_listar_peliculas";
-            cmd.CommandType = CommandType.StoredProcedure;
+          //  cmd.CommandText = "sp_listar_peliculas";
+            cmd.CommandText = "SELECT * FROM Pelicula";
+
+          //  cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+           
             da.Fill(dt);
             return dt;
+        }
+        public TrabajarPeliculas() { 
         }
     }
 }

@@ -35,10 +35,6 @@ C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\bin\De
 C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\bin\Debug\cines_log.ldf
 C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x86\Debug\WinPeliculas.baml
 C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x86\Debug\WinPeliculas.g.cs
-C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\Vistas.exe
-C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\Vistas.pdb
-C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\bin\Debug\cines.mdf
-C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\bin\Debug\cines_log.ldf
 C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\bin\Debug\Vistas.exe
 C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\bin\Debug\Vistas.pdb
 C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\bin\Debug\ClasesBase.dll
@@ -72,3 +68,5 @@ C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\WinLogin.baml
 C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\Vistas.g.resources
 C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
 C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\Vistas.exe
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\Vistas.pdb
