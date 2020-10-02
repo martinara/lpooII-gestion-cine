@@ -23,8 +23,8 @@ namespace Vistas
 
         private void btnPeliculas_Click(object sender, RoutedEventArgs e)
         {
-            WinAltaPelicula oAltaPelicula = new WinAltaPelicula();
-            oAltaPelicula.Show();
+            WinPeliculas oPelicula = new WinPeliculas();
+            oPelicula.Show();
             this.Close();
         }
 

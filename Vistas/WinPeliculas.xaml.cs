@@ -51,5 +51,12 @@ namespace Vistas
             oAltaProyeccion.Show();
             this.Close();
         }
+
+        private void btnAltaP_Click(object sender, RoutedEventArgs e)
+        {
+            WinAltaPelicula oAltaPeliculas = new WinAltaPelicula();
+            oAltaPeliculas.Show();
+            this.Close();
+        }
     }
 }

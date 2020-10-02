@@ -81,6 +81,13 @@ namespace Vistas
             oAltaProyeccion.Show();
             this.Close();
         }
+
+        private void btnAtras_Click(object sender, RoutedEventArgs e)
+        {
+            WinPeliculas oPeli = new WinPeliculas();
+            oPeli.Show();
+            this.Close();
+        }
     
     }
 }

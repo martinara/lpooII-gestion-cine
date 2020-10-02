@@ -53,10 +53,13 @@
                     </ListView.View>
                 </ListView>
             </Grid>
-            <Button Content="Button" Height="23" Name="button1" Width="75" />
-            <Button Content="Button" Height="23" Name="button2" Width="75" />
-            <Button Content="Button" Height="23" Name="button3" Width="75" />
+           
         </StackPanel>
-
+        <Grid>
+            <Button Content="MODIFICAR" Height="23" Name="btnModP" Width="75" Margin="387,269,416,269" />
+            <Button Content="ELIMINAR" Height="23" Name="btnBajaP" Width="75" Margin="563,269,241,269" />
+            <Button Content="AGREGAR" Height="23" Name="btnAltaP" Width="75" Margin="228,269,575,269" Click="btnAltaP_Click" />
+        </Grid>
+        
     </Grid>
 </Window>
