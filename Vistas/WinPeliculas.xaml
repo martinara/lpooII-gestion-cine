@@ -44,10 +44,10 @@
                 <ListView Name="Peliculas" ItemsSource="{Binding Source={StaticResource listar_peliculas}}">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn DisplayMemberBinding="{Binding Path= PEL_titulo}"/>
-                            <GridViewColumn DisplayMemberBinding="{Binding Path=PEL_clasificacion}"/>
-                            <GridViewColumn DisplayMemberBinding="{Binding Path= PEL_duracion}"/>
-                            <GridViewColumn DisplayMemberBinding="{Binding Path= PEL_genero}"/>
+                            <GridViewColumn Header="Titulo" DisplayMemberBinding="{Binding Path= PEL_titulo}"/>
+                            <GridViewColumn Header="Clasificacion" Width="80" DisplayMemberBinding="{Binding Path=PEL_clasificacion}"/>
+                            <GridViewColumn Header="Duracion"  Width="70" DisplayMemberBinding="{Binding Path= PEL_duracion}"/>
+                            <GridViewColumn Header="Genero" Width="80" DisplayMemberBinding="{Binding Path= PEL_genero}"/>
                            
                         </GridView>
                     </ListView.View>
