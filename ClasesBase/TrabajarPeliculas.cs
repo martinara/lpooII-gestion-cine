@@ -5,9 +5,9 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Data;
 
-namespace ClasesBase.controlador
+namespace ClasesBase
 {
-    class TrabajarPeliculas
+    public class TrabajarPeliculas
     {
         // Metodo para listar las peliculas cargadas en la BD
         public static DataTable listarPeliculas()
@@ -17,10 +17,15 @@ namespace ClasesBase.controlador
             cmd.CommandText = "sp_listar_peliculas";
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
             return dt;
+        }
+
+        public TrabajarPeliculas()
+        {
+
         }
     }
 }

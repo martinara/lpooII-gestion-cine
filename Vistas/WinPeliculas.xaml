@@ -8,7 +8,7 @@
 
     <!-- Recurso para enlace de datos con la BD -->
     <Window.Resources>
-        <ObjectDataProvider MethodName="listarPeliculas" x:Key="listar_peliculas"/>
+        <ObjectDataProvider ObjectType="{x:Type svc:TrabajarPeliculas}" MethodName="listarPeliculas" x:Key="listar_peliculas"/>
     </Window.Resources>
 
     <Grid>
@@ -39,20 +39,26 @@
             </Grid>
 
             <Separator></Separator>
-            
+
             <Grid>
-                <ListView>
+                <ListView Margin="150,20,150,20" Name="grillaPeliculas" ItemsSource="{Binding Source={StaticResource listar_peliculas}}">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn/>
-                            <GridViewColumn/>
-                            <GridViewColumn/>
-                            <GridViewColumn/>
-                            <GridViewColumn/>
+                            <GridViewColumn Width="50" Header="ID" DisplayMemberBinding="{Binding Path=ID}"/>
+                            <GridViewColumn Width="180" Header="TITULO" DisplayMemberBinding="{Binding Path=TITULO}"/>
+                            <GridViewColumn Width="100" Header="DURACION (min)" DisplayMemberBinding="{Binding Path=DURACION}"/>
+                            <GridViewColumn Width="100" Header="CLASIFICACION" DisplayMemberBinding="{Binding Path=CLASIFICACION}"/>
+                            <GridViewColumn Width="100" Header="GENERO" DisplayMemberBinding="{Binding Path=GENERO}"/>
                         </GridView>
                     </ListView.View>
                 </ListView>
             </Grid>
+            
+            <StackPanel Orientation="Horizontal" Margin="230,10,230,10">
+                <Button Margin="20,20,20,20" Name="btnAgregar" Content="Agregar" Style="{StaticResource ResourceKey=PlantillaBtn}" Click="btnAgregar_Click"/>
+                <Button Margin="20,20,20,20" Name="btnModificar" Content="Modificar" Style="{StaticResource ResourceKey=PlantillaBtn}"/>
+                <Button Margin="20,20,20,20" Name="btnEliminar" Content="Eliminar" Style="{StaticResource ResourceKey=PlantillaBtn}"/>
+            </StackPanel>
 
         </StackPanel>
 
