@@ -43,6 +43,7 @@ C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\Vistas.csprojResol
 C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\controlUsuario\Login.baml
 C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\estilosYplantillas\EstilosGenerales.baml
 C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\estilosYplantillas\PlantillasGenerales.baml
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\ValidarCliente.baml
 C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\WinAltaCliente.baml
 C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\WinAltaPelicula.baml
 C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\WinAltaProyeccion.baml
@@ -52,6 +53,7 @@ C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\WinMenuVendedor.ba
 C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\WinPeliculas.baml
 C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\App.baml
 C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\controlUsuario\Login.g.cs
+C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\ValidarCliente.g.cs
 C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\WinAltaCliente.g.cs
 C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\WinAltaPelicula.g.cs
 C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\obj\x86\Debug\WinAltaProyeccion.g.cs

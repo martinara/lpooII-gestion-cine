@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.ComponentModel;
 
 namespace ClasesBase
 {
-    public class Cliente
+    public class Cliente: IDataErrorInfo
     {
         private string cli_Apellido;
 
@@ -48,6 +49,77 @@ namespace ClasesBase
         {
             get { return cli_Telefono; }
             set { cli_Telefono = value; }
+        }
+
+        public string Error
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public string this[string columnName]
+        {
+            get {
+
+                string msg_error = null;
+                switch (columnName)
+                {
+                    case "Cli_Nombre":
+                        msg_error = validar_Nombre();
+                        break;
+                    case "Cli_Apellido":
+                        msg_error = validar_Apellido();
+                        break;
+                    case "Cli_Dni":
+                        msg_error = validar_Dni();
+                        break;
+                    case "Cli_Telefono":
+                        msg_error = validar_Telefono();
+                        break;
+                }
+                return msg_error;
+            
+            }
+        }
+
+        private string validar_Nombre()
+        {
+            if (String.IsNullOrEmpty(Cli_Nombre))
+            {
+                return "El valor del campo es obligatorio";
+            }
+            return null;
+        }
+
+        private string validar_Apellido()
+        {
+            if (String.IsNullOrEmpty(Cli_Apellido))
+            {
+                return "El valor del campo es obligatorio";
+            }
+            
+            return null;
+        }
+        private string validar_Dni()
+         //  string dni= Convert.ToString(Cli_Dni);
+        {
+            if (String.IsNullOrEmpty(Convert.ToString(Cli_Dni)))
+            {
+                return "El valor del campo es obligatorio";
+            }
+            else if (Convert.ToString(Cli_Dni).Length < 8)
+            {
+                return "Debe tener al menos 8 caracteres";
+            }
+            return null;
+        }
+        private string validar_Telefono()
+        {
+            if (String.IsNullOrEmpty(Convert.ToString(Cli_Telefono)))
+            {
+                return "El valor del campo es obligatorio";
+            }
+           
+            return null;
         }
     }
 }

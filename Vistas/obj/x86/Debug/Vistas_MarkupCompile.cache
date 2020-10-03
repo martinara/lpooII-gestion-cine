@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\RENE\Documents\lpooII-MartinTP3\Vistas\App.xaml
-111339379879
+12-53341165
 
-13406789751
+14459843862
 131794486733
-controlUsuario\Login.xaml;estilosYplantillas\EstilosGenerales.xaml;estilosYplantillas\PlantillasGenerales.xaml;WinAltaCliente.xaml;WinAltaPelicula.xaml;WinAltaProyeccion.xaml;WinElegirButaca.xaml;WinLogin.xaml;WinMenuAdmin.xaml;WinMenuVendedor.xaml;WinPeliculas.xaml;
+controlUsuario\Login.xaml;estilosYplantillas\EstilosGenerales.xaml;estilosYplantillas\PlantillasGenerales.xaml;ValidarCliente.xaml;WinAltaCliente.xaml;WinAltaPelicula.xaml;WinAltaProyeccion.xaml;WinElegirButaca.xaml;WinLogin.xaml;WinMenuAdmin.xaml;WinMenuVendedor.xaml;WinPeliculas.xaml;
 
 False
 
