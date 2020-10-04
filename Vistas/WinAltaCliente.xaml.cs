@@ -30,8 +30,8 @@ namespace Vistas
 
         private void btnClientes_Click(object sender, RoutedEventArgs e)
         {
-            WinAltaCliente oAltaCliente = new WinAltaCliente();
-            oAltaCliente.Show();
+            WinClientes oClientes = new WinClientes();
+            oClientes.Show();
             this.Close();
         }
 
@@ -45,7 +45,7 @@ namespace Vistas
                 oCliente.Cli_Nombre = txtNombre.Text;
                 oCliente.Cli_Dni = int.Parse(txtDni.Text);
                 oCliente.Cli_Email = txtEmail.Text;
-                oCliente.Cli_Telefono = int.Parse(txtTelefono.Text);
+                oCliente.Cli_Telefono = txtTelefono.Text;
 
                 MessageBox.Show("Se guardaron los siguiente datos: \n" +
                     "\n DNI: " + oCliente.Cli_Dni.ToString() +

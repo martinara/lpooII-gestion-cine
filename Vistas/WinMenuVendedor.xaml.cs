@@ -32,8 +32,8 @@ namespace Vistas
 
         private void btnClientes_Click(object sender, RoutedEventArgs e)
         {
-            WinAltaCliente oAltaCliente = new WinAltaCliente();
-            oAltaCliente.Show();
+            WinClientes oClientes = new WinClientes();
+            oClientes.Show();
             this.Close();
         }
     }

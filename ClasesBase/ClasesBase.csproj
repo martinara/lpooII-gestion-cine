@@ -60,6 +60,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>cinesDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TrabajarClientes.cs" />
     <Compile Include="TrabajarPeliculas.cs" />
     <Compile Include="TrabajarUsuarios.cs" />
     <Compile Include="modelo\Butaca.cs" />

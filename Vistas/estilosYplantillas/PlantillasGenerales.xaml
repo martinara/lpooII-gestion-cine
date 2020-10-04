@@ -30,8 +30,6 @@
     <Style x:Key="PlantillaBtn" TargetType="Button">
         <Setter Property="Template" Value="{StaticResource ResourceKey=plantilla_btn}"></Setter>
     </Style>
-
-    <!-- Plantilla de Error -->
     
 
 </ResourceDictionary>

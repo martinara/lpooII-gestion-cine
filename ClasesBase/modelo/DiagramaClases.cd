@@ -18,9 +18,10 @@
   <Class Name="ClasesBase.Cliente">
     <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAAAAACAAAAAgQAAAAEAAAAAAAAAAAAAAAwAAIAMAAA=</HashCode>
+      <HashCode>gAAAAACBAQACgQAASAEAAAAAAAAAAAAAAAwQAIAMAAA=</HashCode>
       <FileName>modelo\Cliente.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="ClasesBase.Pelicula">
     <Position X="5.75" Y="0.5" Width="1.5" />

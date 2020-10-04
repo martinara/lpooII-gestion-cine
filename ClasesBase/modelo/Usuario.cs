@@ -44,6 +44,7 @@ namespace ClasesBase
             set { usu_Username = value; }
         }
 
+        //Implementacion de la interface IDataErrorInfo
         public string Error
         {
             get { throw new NotImplementedException(); }
