@@ -12,9 +12,9 @@
                 <Ellipse Width="10" Height="10" DockPanel.Dock="Right">
                     <Ellipse.Fill>
                         <LinearGradientBrush>
-                            <GradientStop Color="#11FF1111" Offset="0" /> 
+                            <GradientStop Color="Blue" Offset="0" /> 
                                 
-                            <GradientStop Color="#FFF0000" Offset="1"/>
+                            <GradientStop Color="Red" Offset="1"/>
                         </LinearGradientBrush>
                     </Ellipse.Fill>
                 </Ellipse>
