@@ -100,7 +100,7 @@
                         <Binding Path="Cli_Telefono" UpdateSourceTrigger="PropertyChanged" ValidatesOnExceptions="True" ValidatesOnDataErrors="True"/>
                     </TextBox.Text>
                 </TextBox>
-                <Button Name="btnModificar" Content="Modificar" Margin="0,10,0,0" Style="{StaticResource ResourceKey=PlantillaBtn}"/>
+                <Button Name="btnModificar" Content="Modificar" Margin="0,10,0,0" Style="{StaticResource ResourceKey=PlantillaBtn}" Click="btnModificar_Click" />
             </StackPanel>
 
         </StackPanel>

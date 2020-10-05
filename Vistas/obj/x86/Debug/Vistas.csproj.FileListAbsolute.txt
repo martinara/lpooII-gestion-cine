@@ -1,3 +1,9 @@
+C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\bin\Debug\cines.mdf
+C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\bin\Debug\cines_log.ldf
+C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\bin\Debug\Vistas.exe
+C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\bin\Debug\Vistas.pdb
+C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\bin\Debug\ClasesBase.dll
+C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\bin\Debug\ClasesBase.pdb
 C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x86\Debug\Vistas.csprojResolveAssemblyReference.cache
 C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x86\Debug\controlUsuario\Login.baml
 C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x86\Debug\estilosYplantillas\EstilosGenerales.baml
@@ -25,12 +31,6 @@ C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x8
 C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x86\Debug\Vistas_MarkupCompile.cache
 C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x86\Debug\Vistas_MarkupCompile.lref
-C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\bin\Debug\cines.mdf
-C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\bin\Debug\cines_log.ldf
-C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\bin\Debug\Vistas.exe
-C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\bin\Debug\Vistas.pdb
-C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\bin\Debug\ClasesBase.dll
-C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\bin\Debug\ClasesBase.pdb
 C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x86\Debug\WinLogin.baml
 C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x86\Debug\Vistas.g.resources
 C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources

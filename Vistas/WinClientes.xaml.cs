@@ -58,5 +58,20 @@ namespace Vistas
                 txtTelefono.Text = oCliente.Cli_Telefono;
             }
         }
+
+        private void btnModificar_Click(object sender, RoutedEventArgs e)
+        {
+            if (txtApellido.Text != "")
+            {
+                Cliente oCliente = new Cliente();
+                oCliente.Cli_Dni = int.Parse(txbBuscarDni.Text);
+                oCliente.Cli_Apellido = txtApellido.Text;
+                oCliente.Cli_Nombre = txtNombre.Text;
+                oCliente.Cli_Email = txtEmail.Text;
+                oCliente.Cli_Telefono = txtTelefono.Text;
+                TrabajarClientes.EditarCliente(oCliente);
+                MessageBox.Show("Datos actualizados correctamente");
+            }
+        }
     }
 }
