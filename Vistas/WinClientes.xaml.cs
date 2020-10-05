@@ -47,16 +47,19 @@ namespace Vistas
 
         private void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
-            int buscado = int.Parse(txbBuscarDni.Text);
-            Cliente oCliente = new Cliente();
-            oCliente = TrabajarClientes.BuscarCliente(buscado);
-            if (oCliente != null)
+            if (txbBuscarDni.Text != "")
             {
-                txtApellido.Text = oCliente.Cli_Apellido;
-                txtNombre.Text = oCliente.Cli_Nombre;
-                txtEmail.Text = oCliente.Cli_Email;
-                txtTelefono.Text = oCliente.Cli_Telefono;
-            }
+                int buscado = int.Parse(txbBuscarDni.Text);
+                Cliente oCliente = new Cliente();
+                oCliente = TrabajarClientes.BuscarCliente(buscado);
+                if (oCliente.Cli_Apellido != null)
+                {
+                    txtApellido.Text = oCliente.Cli_Apellido;
+                    txtNombre.Text = oCliente.Cli_Nombre;
+                    txtEmail.Text = oCliente.Cli_Email;
+                    txtTelefono.Text = oCliente.Cli_Telefono;
+                }else MessageBox.Show("Dni no encontrado");
+            }else MessageBox.Show("Debe ingresar un dni a buscar");
         }
 
         private void btnModificar_Click(object sender, RoutedEventArgs e)

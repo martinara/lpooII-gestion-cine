@@ -1,5 +1,3 @@
-C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\ClasesBase\bin\Debug\cines.mdf
-C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\ClasesBase\bin\Debug\cines_log.ldf
 C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\ClasesBase\bin\Debug\ClasesBase.dll.config
 C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\ClasesBase\bin\Debug\ClasesBase.dll
 C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\ClasesBase\bin\Debug\ClasesBase.pdb
