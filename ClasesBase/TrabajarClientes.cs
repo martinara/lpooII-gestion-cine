@@ -60,5 +60,22 @@ namespace ClasesBase
             cmd.ExecuteNonQuery();
             cnn.Close();
         }
+
+        public static void AgregarCliente(Cliente cliente)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.cinesConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "sp_agregar_cliente";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+            cmd.Parameters.AddWithValue("@dni", cliente.Cli_Dni);
+            cmd.Parameters.AddWithValue("@nombre", cliente.Cli_Nombre);
+            cmd.Parameters.AddWithValue("@apellido", cliente.Cli_Apellido);
+            cmd.Parameters.AddWithValue("@email", cliente.Cli_Email);
+            cmd.Parameters.AddWithValue("@telefono", cliente.Cli_Telefono);
+            cnn.Open();
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+        }
     }
 }

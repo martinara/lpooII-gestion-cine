@@ -46,14 +46,7 @@ namespace Vistas
                 oCliente.Cli_Dni = int.Parse(txtDni.Text);
                 oCliente.Cli_Email = txtEmail.Text;
                 oCliente.Cli_Telefono = txtTelefono.Text;
-
-                MessageBox.Show("Se guardaron los siguiente datos: \n" +
-                    "\n DNI: " + oCliente.Cli_Dni.ToString() +
-                    "\n NOMBRE: " + oCliente.Cli_Nombre +
-                    "\n APELLIDO: " + oCliente.Cli_Apellido +
-                    "\n TELEFONO: " + oCliente.Cli_Telefono +
-                    "\n EMAIL: " + oCliente.Cli_Email);
-
+                TrabajarClientes.AgregarCliente(oCliente);
                 LimpiarCamposCliente();
             }
             else
