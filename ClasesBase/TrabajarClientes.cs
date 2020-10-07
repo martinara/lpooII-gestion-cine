@@ -77,5 +77,33 @@ namespace ClasesBase
             cmd.ExecuteNonQuery();
             cnn.Close();
         }
+
+
+        // Metodo para listar los clientes cargadas en la BD
+        public static DataTable listarClientes()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.cinesConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "sp_listar_clientes";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            return dt;
+        }
+
+
+
     }
 }
+
+
+
+
+
+
+
+
+
+

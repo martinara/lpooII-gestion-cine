@@ -41,7 +41,7 @@
             <Separator></Separator>
 
             <Grid>
-                <ListView Margin="150,20,150,20" Name="grillaPeliculas" ItemsSource="{Binding Source={StaticResource listar_peliculas}}">
+                <ListView Margin="150,20,150,20" Name="grillaPeliculas" ItemsSource="{Binding Source={StaticResource listar_peliculas}}" DataContext="{Binding}">
                     <ListView.View>
                         <GridView>
                             <GridViewColumn Width="50" Header="ID" DisplayMemberBinding="{Binding Path=ID}"/>

@@ -33,7 +33,7 @@
             </Grid>
 
             <Separator></Separator>
-
+            <Image Height="344" Name="image1" Stretch="Fill" Width="614" Source="/Vistas;component/images/img%20admin.jpeg" />
         </StackPanel>
 
     </Grid>

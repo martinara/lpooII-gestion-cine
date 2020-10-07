@@ -48,7 +48,7 @@
             <ImageBrush ImageSource="/Vistas;component/images/bg.jpg" />
         </Grid.Background>
 
-        <StackPanel Margin="20,0,20,20">
+        <StackPanel >
 
             <Grid Height="70">
 
@@ -69,8 +69,22 @@
 
             <Separator></Separator>
 
-            <StackPanel Margin="330,20,330,20">
-                <Button Name="btnAlta" Content="Crear Cliente" Margin="0,0,0,10" Style="{StaticResource ResourceKey=PlantillaBtn}" Click="btnAlta_Click" />
+            <Grid>
+                <ListView Margin="150,20,150,20" Name="grillaclientes" ItemsSource="{Binding Source={StaticResource DATA_CLIENTE}}" DataContext="{Binding}">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Width="50" Header="DNI" DisplayMemberBinding="{Binding Path=CLI_nombre, Source={StaticResource DATA_CLIENTE}}"/>
+                            <GridViewColumn Width="180" Header="APELLIDO" DisplayMemberBinding="{Binding Path=Cli_Apellido, Source={StaticResource DATA_CLIENTE}}"/>
+                            <GridViewColumn Width="100" Header="NOMBRE" DisplayMemberBinding="{Binding Path=cli_nombre}"/>
+                            <GridViewColumn Width="100" Header="EMAIL" DisplayMemberBinding="{Binding Path=Cli_email}"/>
+                            <GridViewColumn Width="100" Header="TELEFONO" DisplayMemberBinding="{Binding Path=Cli_telefono}"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Grid>
+
+
+            <StackPanel Margin="330,20,330,20" Width="212" Height="381">
                 <Separator></Separator>
                 <Label Name="lblBuscarDni" Content="Ingrese DNI a buscar:" Foreground="White" Margin="0,10,0,0"/>
                 <TextBox Name="txbBuscarDni" Style="{StaticResource ResourceKey=EstiloTxb}"/>
@@ -101,8 +115,8 @@
                     </TextBox.Text>
                 </TextBox>
                 <Button Name="btnModificar" Content="Modificar" Margin="0,10,0,0" Style="{StaticResource ResourceKey=PlantillaBtn}" Click="btnModificar_Click" />
+                <Button Name="btnAlta" Content="Crear Cliente" Margin="0,0,0,10" Style="{StaticResource PlantillaBtn}" Click="btnAlta_Click" />
             </StackPanel>
-
         </StackPanel>
 
     </Grid>

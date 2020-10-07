@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("comboboxs/generos.xml")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/img%20cliente.jpg")]
 
 

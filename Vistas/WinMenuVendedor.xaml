@@ -31,7 +31,7 @@
             </Grid>
 
             <Separator></Separator>
-
+            <Image Height="258" Name="image1" Stretch="Fill" Width="540" Source="/Vistas;component/images/img%20cliente.jpg" />
         </StackPanel>
 
     </Grid>

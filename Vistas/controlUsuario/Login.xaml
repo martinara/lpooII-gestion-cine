@@ -62,12 +62,8 @@
                 <Label Name="lblPassword" Content="Contraseña" Foreground="White" Margin="0,10,0,0"/>
             </StackPanel>
 
-            <TextBox Name="pwbPassword" Margin="0,0,0,0" DataContext="{StaticResource DATA_USER}" Style="{StaticResource EstiloError}">
-                <TextBox.Text>
-                    <Binding Path="Usu_Password" UpdateSourceTrigger="PropertyChanged" ValidatesOnExceptions="True" ValidatesOnDataErrors="True"/>
-                </TextBox.Text>
-            </TextBox>
-            
+            <PasswordBox Name="pwbPassword" Margin="0,0,0,0" Style="{StaticResource ResourceKey=EstiloPwb}"/>
+
         </StackPanel>
 
     </Grid>
