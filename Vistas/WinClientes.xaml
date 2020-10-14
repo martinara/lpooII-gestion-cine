@@ -7,7 +7,7 @@
         WindowStartupLocation="CenterScreen">
 
     <Window.Resources>
-        <ObjectDataProvider x:Key="DATA_CLIENTE" ObjectType="{x:Type svc:TrabajarClientes}" MethodName="TraerCliente" />
+        <ObjectDataProvider x:Key="DATA_CLIENTE" ObjectType="{x:Type svc:TrabajarClientes}" MethodName="listarClientes" />
 
         <ControlTemplate x:Key="TextBoxErrorTemplate">
             <DockPanel>
@@ -73,11 +73,12 @@
                 <ListView Margin="150,20,150,20" Name="grillaclientes" ItemsSource="{Binding Source={StaticResource DATA_CLIENTE}}" DataContext="{Binding}">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Width="50" Header="DNI" DisplayMemberBinding="{Binding Path=CLI_nombre, Source={StaticResource DATA_CLIENTE}}"/>
-                            <GridViewColumn Width="180" Header="APELLIDO" DisplayMemberBinding="{Binding Path=Cli_Apellido, Source={StaticResource DATA_CLIENTE}}"/>
-                            <GridViewColumn Width="100" Header="NOMBRE" DisplayMemberBinding="{Binding Path=cli_nombre}"/>
-                            <GridViewColumn Width="100" Header="EMAIL" DisplayMemberBinding="{Binding Path=Cli_email}"/>
-                            <GridViewColumn Width="100" Header="TELEFONO" DisplayMemberBinding="{Binding Path=Cli_telefono}"/>
+                            <GridViewColumn Width="50" Header="ID" DisplayMemberBinding="{Binding Path=ID}"/>
+                            <GridViewColumn Width="80" Header="APELLIDO" DisplayMemberBinding="{Binding Path=APELLIDO}"/>
+                            <GridViewColumn Width="100" Header="NOMBRE" DisplayMemberBinding="{Binding Path=NOMBRE}"/>
+                            <GridViewColumn Width="80" Header="DNI" DisplayMemberBinding="{Binding Path=DNI}"/>
+                            <GridViewColumn Width="150" Header="EMAIL" DisplayMemberBinding="{Binding Path=EMAIL}"/>
+                            <GridViewColumn Width="100" Header="TELEFONO" DisplayMemberBinding="{Binding Path=TELEFONO}"/>
                         </GridView>
                     </ListView.View>
                 </ListView>
