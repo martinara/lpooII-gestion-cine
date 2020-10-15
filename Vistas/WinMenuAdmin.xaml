@@ -11,30 +11,38 @@
             <ImageBrush ImageSource="/Vistas;component/images/bg.jpg" />
         </Grid.Background>
 
-        <StackPanel Margin="20,0,20,20">
-            
-            <Grid Height="70">
+        <StackPanel>
+
+            <!-- Inicio de la barra de menu -->
+            <Grid Height="29" Background="Black">
                 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="100"/>
-                    <ColumnDefinition Width="600"/>
+                    <ColumnDefinition Width="800"/>
                 </Grid.ColumnDefinitions>
                 
                 <Image Grid.Column="0" Source="/Vistas;component/images/logo-menu.png"/>
-                
-                <Menu Grid.Column="1" Foreground="White" Background="Transparent" Margin="10,20,10,20" VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <MenuItem Header="Usuarios" Name="btnUsuarios" FontSize="20"/>
-                    <MenuItem Header="Peliculas" Name="btnPeliculas" FontSize="20" Click="btnPeliculas_Click" />
-                    <MenuItem Header="Butacas" Name="btnButacas" FontSize="20" Click="btnButacas_Click" />
-                    <MenuItem Header="Proyecciones" Name="btnProyecciones" FontSize="20" Click="btnProyecciones_Click" />
-                    <MenuItem Header="Cerrar Sesion" Name="btnLogout" FontSize="20" Click="btnLogout_Click" />
+
+                <Menu Grid.Column="1" Foreground="White" Background="Transparent" Height="40" Width="790">
+                    <MenuItem Header="Usuarios" Name="btnUsuarios" FontSize="20" Width="150">
+                        <MenuItem Header="_ABM" Foreground="Black"/>
+                        <MenuItem Header="_Listado de usuarios" Foreground="Black"/>
+                    </MenuItem>
+                    <MenuItem Header="Peliculas" Name="btnPeliculas" FontSize="20" Width="150" Click="btnPeliculas_Click" />
+                    <MenuItem Header="Butacas" Name="btnButacas" FontSize="20" Width="160" Click="btnButacas_Click" />
+                    <MenuItem Header="Proyecciones" Name="btnProyecciones" FontSize="20" Width="160" Click="btnProyecciones_Click" />
+                    <MenuItem Header="Cerrar Sesion" Name="btnLogout" FontSize="20" Width="160" Click="btnLogout_Click" />
                 </Menu>
 
             </Grid>
+            <!-- Fin de la barra de menu -->
 
             <Separator></Separator>
-            <Image Height="344" Name="image1" Stretch="Fill" Width="614" Source="/Vistas;component/images/img%20admin.jpeg" />
+            
+            <Image Name="image1" Height="530" Source="/Vistas;component/images/logo-central.png" />
+            
         </StackPanel>
 
     </Grid>
+    
 </Window>

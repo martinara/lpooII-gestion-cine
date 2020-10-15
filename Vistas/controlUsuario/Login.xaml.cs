@@ -31,7 +31,7 @@ namespace Vistas.controlUsuario
 
         public String Password
         {
-            get { return pwbPassword.Password; }
+            get { return pwbPassword.Text; }
         }
     }
 }
