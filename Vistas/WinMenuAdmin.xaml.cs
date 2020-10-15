@@ -50,5 +50,12 @@ namespace Vistas
             oAltaProyeccion.Show();
             this.Close();
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            WinAbmUsuario oAbmUsuario = new WinAbmUsuario();
+            oAbmUsuario.Show();
+            this.Close();
+        }
     }
 }

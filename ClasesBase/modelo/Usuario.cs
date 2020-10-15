@@ -6,42 +6,53 @@ using System.ComponentModel;
 
 namespace ClasesBase
 {
-    public class Usuario : IDataErrorInfo
+    public class Usuario : IDataErrorInfo, INotifyPropertyChanged
     {
         private int rol_Id;
 
         public int Rol_Id
         {
             get { return rol_Id; }
-            set { rol_Id = value; }
+            set {
+                rol_Id = value;
+                Notificador(rol_Id.ToString());
+            }
         }
         private string usu_ApellidoNombre;
 
         public string Usu_ApellidoNombre
         {
             get { return usu_ApellidoNombre; }
-            set { usu_ApellidoNombre = value; }
+            set { usu_ApellidoNombre = value;
+            Notificador(usu_ApellidoNombre);
+            }
         }
         private int usu_Id;
 
         public int Usu_Id
         {
             get { return usu_Id; }
-            set { usu_Id = value; }
+            set { usu_Id = value;
+            Notificador(usu_Id.ToString());
+            }
         }
         private string usu_Password;
 
         public string Usu_Password
         {
             get { return usu_Password; }
-            set { usu_Password = value; }
+            set { usu_Password = value;
+            Notificador(usu_Password);
+            }
         }
         private string usu_Username;
 
         public string Usu_Username
         {
             get { return usu_Username; }
-            set { usu_Username = value; }
+            set { usu_Username = value;
+            Notificador(usu_Username);
+            }
         }
 
         //Implementacion de la interface IDataErrorInfo
@@ -88,6 +99,17 @@ namespace ClasesBase
                 return "Debe tener al menos 5 caracteres";
             }
             return null;
+        }
+
+        //Implementacion de la interface INotifyPropertyChanged
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void Notificador(string prop)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(prop));
+            }
         }
     }
 }

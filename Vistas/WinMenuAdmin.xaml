@@ -25,8 +25,8 @@
 
                 <Menu Grid.Column="1" Foreground="White" Background="Transparent" Height="40" Width="790">
                     <MenuItem Header="Usuarios" Name="btnUsuarios" FontSize="20" Width="150">
-                        <MenuItem Header="_ABM" Foreground="Black"/>
-                        <MenuItem Header="_Listado de usuarios" Foreground="Black"/>
+                        <MenuItem Header="_ABM" Name="btnAbmUsuarios" Foreground="Black" Click="MenuItem_Click" />
+                        <MenuItem Header="_Listado de usuarios" Name="btnListaUsuarios" Foreground="Black"/>
                     </MenuItem>
                     <MenuItem Header="Peliculas" Name="btnPeliculas" FontSize="20" Width="150" Click="btnPeliculas_Click" />
                     <MenuItem Header="Butacas" Name="btnButacas" FontSize="20" Width="160" Click="btnButacas_Click" />

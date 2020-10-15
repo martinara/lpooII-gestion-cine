@@ -58,6 +58,9 @@
     <Compile Include="controlUsuario\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinAbmUsuario.xaml.cs">
+      <DependentUpon>WinAbmUsuario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinAltaCliente.xaml.cs">
       <DependentUpon>WinAltaCliente.xaml</DependentUpon>
     </Compile>
@@ -98,6 +101,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="estilosYplantillas\PlantillasGenerales.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinAbmUsuario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
