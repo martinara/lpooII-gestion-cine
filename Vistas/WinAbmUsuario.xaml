@@ -52,7 +52,7 @@
                     <Button Name="btnPrevious" Content="&lt;" Width="70" Click="btnPrevious_Click" />
                     <Button Name="btnNext" Content="&gt;" Width="70" Click="btnNext_Click" />
                     <Button Name="btnLast" Content="&gt;|" Width="70" Click="btnLast_Click" />
-                    <Button Name="btnNew" Content="Nuevo" Width="70"/>
+                    <Button Name="btnNew" Content="Nuevo" Width="70" Click="btnNew_Click" />
                     <Button Name="btnDelete" Content="Eliminar" Width="70"/>
                     <Button Name="btnEdit" Content="Modificar" Width="70"/>
                 </StackPanel>

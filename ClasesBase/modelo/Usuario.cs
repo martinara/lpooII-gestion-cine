@@ -68,6 +68,9 @@ namespace ClasesBase
                 string msg_error = null;
                 switch (columnName)
                 {
+                    case "Usu_ApellidoNombre":
+                        msg_error = validar_ApellidoNombre();
+                        break;
                     case "Usu_Username":
                         msg_error = validar_Username();
                         break;
@@ -79,6 +82,15 @@ namespace ClasesBase
             }
         }
 
+        private string validar_ApellidoNombre()
+        {
+            if (String.IsNullOrEmpty(Usu_ApellidoNombre))
+            {
+                return "El valor del campo es obligatorio";
+            }
+            return null;
+        }
+        
         private string validar_Username()
         {
             if (String.IsNullOrEmpty(Usu_Username))

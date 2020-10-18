@@ -97,5 +97,12 @@ namespace Vistas
                 Vista.MoveCurrentToFirst();
             }
         }
+
+        private void btnNew_Click(object sender, RoutedEventArgs e)
+        {
+            WinAltaUsuario oAltaUsuario = new WinAltaUsuario();
+            oAltaUsuario.Show();
+            this.Close();
+        }
     }
 }

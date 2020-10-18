@@ -80,5 +80,12 @@ namespace Vistas
             txtHorario.Clear();
             txtSala.Clear();
         }
+
+        private void btnAbmUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            WinAbmUsuario oAbmUsuario = new WinAbmUsuario();
+            oAbmUsuario.Show();
+            this.Close();
+        }
     }
 }

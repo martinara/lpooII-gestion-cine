@@ -44,5 +44,21 @@ namespace ClasesBase
             }
             return listaUsuarios;
         }
+
+        public static void AgregarUsuario(Usuario usuario)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.cinesConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "sp_agregar_usuario";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+            cmd.Parameters.AddWithValue("@apellido", usuario.Usu_ApellidoNombre);
+            cmd.Parameters.AddWithValue("@rol", usuario.Rol_Id);
+            cmd.Parameters.AddWithValue("@username", usuario.Usu_Username);
+            cmd.Parameters.AddWithValue("@password", usuario.Usu_Password);
+            cnn.Open();
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+        }
     }
 }

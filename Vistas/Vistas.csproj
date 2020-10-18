@@ -70,6 +70,9 @@
     <Compile Include="WinAltaProyeccion.xaml.cs">
       <DependentUpon>WinAltaProyeccion.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinAltaUsuario.xaml.cs">
+      <DependentUpon>WinAltaUsuario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinClientes.xaml.cs">
       <DependentUpon>WinClientes.xaml</DependentUpon>
     </Compile>
@@ -117,6 +120,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WinAltaProyeccion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinAltaUsuario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -209,6 +216,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\logo-central2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="comboboxs\Roles.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
