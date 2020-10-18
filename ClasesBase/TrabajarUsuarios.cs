@@ -35,11 +35,18 @@ namespace ClasesBase
             while (reader.Read())
             {
                 Usuario oUsuario = new Usuario();
+                Rol oRol = new Rol();
                 oUsuario.Usu_Id = (int)reader["USU_id"];
                 oUsuario.Usu_ApellidoNombre = (string)reader["USU_apellidoNombre"];
                 oUsuario.Usu_Username = (string)reader["USU_username"];
                 oUsuario.Usu_Password = (string)reader["USU_password"];
-                oUsuario.Rol_Id = (int)reader["ROL_id"];
+                oRol.Rol_Id = (int)reader["ROL_id"];
+                if (oRol.Rol_Id == 1)
+                {
+                    oRol.Rol_Descripcion = "administrador";
+                }
+                else oRol.Rol_Descripcion = "vendedor";
+                oUsuario.Usu_Rol = oRol;
                 listaUsuarios.Add(oUsuario);
             }
             return listaUsuarios;
@@ -53,7 +60,7 @@ namespace ClasesBase
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
             cmd.Parameters.AddWithValue("@apellido", usuario.Usu_ApellidoNombre);
-            cmd.Parameters.AddWithValue("@rol", usuario.Rol_Id);
+            cmd.Parameters.AddWithValue("@rol", usuario.Usu_Rol.Rol_Id);
             cmd.Parameters.AddWithValue("@username", usuario.Usu_Username);
             cmd.Parameters.AddWithValue("@password", usuario.Usu_Password);
             cnn.Open();

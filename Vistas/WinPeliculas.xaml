@@ -33,7 +33,7 @@
                 <Menu Grid.Column="1" Foreground="White" Background="Transparent" Height="40" Width="790">
                     <MenuItem Header="Usuarios" Name="btnUsuarios" FontSize="20" Width="150">
                         <MenuItem Header="ABM" Name="btnAbmUsuario" Foreground="Black" Click="btnAbmUsuario_Click" />
-                        <MenuItem Header="Listado de usuarios" Name="btnListadoUsuario" Foreground="Black"/>
+                        <MenuItem Header="Listado de usuarios" Name="btnListadoUsuario" Foreground="Black" Click="btnListadoUsuario_Click" />
                     </MenuItem>
                     <MenuItem Header="Peliculas" Name="btnPeliculas" FontSize="20" Width="150" Click="btnPeliculas_Click" />
                     <MenuItem Header="Butacas" Name="btnButacas" FontSize="20" Width="160" Click="btnButacas_Click" />

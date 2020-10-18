@@ -31,7 +31,7 @@
                 <Menu Grid.Column="1" Foreground="White" Background="Transparent" Height="40" Width="790">
                     <MenuItem Header="Usuarios" Name="btnUsuarios" FontSize="20" Width="150">
                         <MenuItem Header="ABM" Name="btnAbmUsuarios" Foreground="Black" Click="btnAbmUsuarios_Click" />
-                        <MenuItem Header="Listado de usuarios" Name="btnListaUsuarios" Foreground="Black"/>
+                        <MenuItem Header="Listado de usuarios" Name="btnListaUsuarios" Foreground="Black" Click="btnListaUsuarios_Click" />
                     </MenuItem>
                     <MenuItem Header="Peliculas" Name="btnPeliculas" FontSize="20" Width="150" Click="btnPeliculas_Click" />
                     <MenuItem Header="Butacas" Name="btnButacas" FontSize="20" Width="160" Click="btnButacas_Click" />
@@ -70,7 +70,7 @@
                     <TextBox Name="txtNombre" Text="{Binding Usu_ApellidoNombre}" Width="150" Height="27" Style="{StaticResource ResourceKey=EstiloTxb}"/>
                     <TextBox Name="txtusername" Text="{Binding Usu_Username}" Width="150" Height="27" Style="{StaticResource ResourceKey=EstiloTxb}"/>
                     <TextBox Name="txtPassword" Text="{Binding Usu_Password}" Width="150" Height="27" Style="{StaticResource ResourceKey=EstiloTxb}"/>
-                    <TextBox Name="txtRol" Text="{Binding Rol_Id}" Width="150" Height="27" Style="{StaticResource ResourceKey=EstiloTxb}"/>
+                    <TextBox Name="txtRol" Text="{Binding Usu_Rol.Rol_Descripcion}" Width="150" Height="27" Style="{StaticResource ResourceKey=EstiloTxb}"/>
                 </StackPanel>
 
                 <Image Name="image1" Height="150" Source="/Vistas;component/images/logo-central.png" OpacityMask="#C9000000" />

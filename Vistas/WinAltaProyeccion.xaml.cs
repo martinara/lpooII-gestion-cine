@@ -87,5 +87,12 @@ namespace Vistas
             oAbmUsuario.Show();
             this.Close();
         }
+
+        private void btnListadoUsuarios_Click(object sender, RoutedEventArgs e)
+        {
+            WinListaUsuarios oListaUsuarios = new WinListaUsuarios();
+            oListaUsuarios.Show();
+            this.Close();
+        }
     }
 }

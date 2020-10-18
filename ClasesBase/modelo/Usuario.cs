@@ -8,14 +8,14 @@ namespace ClasesBase
 {
     public class Usuario : IDataErrorInfo, INotifyPropertyChanged
     {
-        private int rol_Id;
+        private Rol usu_Rol;
 
-        public int Rol_Id
+        public Rol Usu_Rol
         {
-            get { return rol_Id; }
+            get { return usu_Rol; }
             set {
-                rol_Id = value;
-                Notificador(rol_Id.ToString());
+                usu_Rol = value;
+                
             }
         }
         private string usu_ApellidoNombre;

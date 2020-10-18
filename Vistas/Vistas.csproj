@@ -79,6 +79,9 @@
     <Compile Include="WinElegirButaca.xaml.cs">
       <DependentUpon>WinElegirButaca.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinListaUsuarios.xaml.cs">
+      <DependentUpon>WinListaUsuarios.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinLogin.xaml.cs">
       <DependentUpon>WinLogin.xaml</DependentUpon>
     </Compile>
@@ -132,6 +135,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WinElegirButaca.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinListaUsuarios.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

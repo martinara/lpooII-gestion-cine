@@ -11,23 +11,49 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ClasesBase;
+using System.Collections.ObjectModel;
 
 namespace Vistas
 {
     /// <summary>
-    /// Interaction logic for WinAltaUsuario.xaml
+    /// Interaction logic for WinListaUsuarios.xaml
     /// </summary>
-    public partial class WinAltaUsuario : Window
+    public partial class WinListaUsuarios : Window
     {
-        public WinAltaUsuario()
+        private CollectionViewSource vistaColeccionFiltrada;
+
+        public WinListaUsuarios()
         {
             InitializeComponent();
+            vistaColeccionFiltrada = Resources["VISTA_USER"] as CollectionViewSource;
         }
 
-        private void btnAbmUsuario_Click(object sender, RoutedEventArgs e)
+        
+
+        private void eventVistaUsuario_Filter(object sender, FilterEventArgs e)
+        {
+            Usuario oUsuario = e.Item as Usuario;
+            if (oUsuario.Usu_Username.StartsWith(txtFiltrarUsername.Text, StringComparison.CurrentCultureIgnoreCase))
+            {
+                e.Accepted = true;
+            }
+            else
+            {
+                e.Accepted = false;
+            }
+        }
+
+        private void btnAbmUsuarios_Click(object sender, RoutedEventArgs e)
         {
             WinAbmUsuario oAbmUsuario = new WinAbmUsuario();
             oAbmUsuario.Show();
+            this.Close();
+        }
+
+        private void btnListaUsuarios_Click(object sender, RoutedEventArgs e)
+        {
+            WinListaUsuarios oListaUsuarios = new WinListaUsuarios();
+            oListaUsuarios.Show();
             this.Close();
         }
 
@@ -59,40 +85,12 @@ namespace Vistas
             this.Close();
         }
 
-        private void btnRegistrar_Click(object sender, RoutedEventArgs e)
+        private void txtFiltrarUsername_TextChanged_1(object sender, TextChangedEventArgs e)
         {
-            int unRol;
-            
-
-            Usuario oUsuario = new Usuario();
-            Rol oRol = new Rol();
-            oUsuario.Usu_ApellidoNombre = txtApellido.Text;
-            if (cbxRol.SelectedValue.ToString() == "Administrador")
+            if (vistaColeccionFiltrada != null)
             {
-                oRol.Rol_Id = 1;
-                oRol.Rol_Descripcion = "administrador";
+                vistaColeccionFiltrada.Filter += eventVistaUsuario_Filter;
             }
-            else
-            {
-                oRol.Rol_Id = 2;
-                oRol.Rol_Descripcion = "vendedor";
-            }
-            oUsuario.Usu_Rol = oRol;
-            oUsuario.Usu_Username = txtUsername.Text;
-            oUsuario.Usu_Password = txtPassword.Text;
-            TrabajarUsuarios.AgregarUsuario(oUsuario);
-
-            WinAbmUsuario oAbmUsuario = new WinAbmUsuario();
-            oAbmUsuario.Show();
-            this.Close();
         }
-
-        private void btnListadoUsuarios_Click(object sender, RoutedEventArgs e)
-        {
-            WinListaUsuarios oListaUsuarios = new WinListaUsuarios();
-            oListaUsuarios.Show();
-            this.Close();
-        }
-
     }
 }
