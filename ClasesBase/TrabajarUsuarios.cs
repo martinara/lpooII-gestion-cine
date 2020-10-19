@@ -26,7 +26,7 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.cinesConnectionString);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "select * from Usuario";
+            cmd.CommandText = "SELECT * FROM Usuario";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
             ObservableCollection<Usuario> listaUsuarios = new ObservableCollection<Usuario>();
