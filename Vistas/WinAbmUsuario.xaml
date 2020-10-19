@@ -4,7 +4,7 @@
         xmlns:svc="clr-namespace:ClasesBase;assembly=ClasesBase"
         Title="Cinemax - Administrador" Height="400" Width="900" ResizeMode="NoResize"
         Icon="/Vistas;component/images/icono-cine.ico"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     
     <Window.Resources>
         <ObjectDataProvider x:Key="LIST_USER" ObjectType="{x:Type svc:TrabajarUsuarios}" MethodName="TraerUsuarios"/>
@@ -45,7 +45,8 @@
             <Separator></Separator>
 
             <!-- Inicio cuadro AMB de usuarios -->
-            <StackPanel Orientation="Horizontal" Name="stack_content" DataContext="{Binding Source={StaticResource ResourceKey=LIST_USER}}" Margin="130,70,130,70" >
+            
+                <StackPanel Orientation="Horizontal" Name="stack_content" Margin="130,70,130,70" DataContext="{Binding Source={StaticResource ResourceKey=LIST_USER}}">
                 
                 <StackPanel Orientation="Vertical">
                     <Button Name="btnFirst" Content="|&lt;" Width="70" Click="btnFirst_Click" />
@@ -76,6 +77,7 @@
                 <Image Name="image1" Height="150" Source="/Vistas;component/images/logo-central.png" OpacityMask="#C9000000" />
 
             </StackPanel>
+            
             <!-- Fin cuadro AMB de usuarios -->
 
         </StackPanel>
