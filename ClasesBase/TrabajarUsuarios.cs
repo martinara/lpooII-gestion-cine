@@ -67,5 +67,27 @@ namespace ClasesBase
             cmd.ExecuteNonQuery();
             cnn.Close();
         }
+
+        public static bool EliminarUsuario(int id)
+        {
+            try
+            {
+                SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.cinesConnectionString);
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = @"DELETE Usuario where USU_id = @id";
+                cmd.Connection = cnn;
+                cmd.Parameters.AddWithValue("@id", id);
+                cnn.Open();
+                cmd.ExecuteNonQuery();
+                cnn.Close();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+
+            }
+        }
     }
 }

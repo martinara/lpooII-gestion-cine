@@ -111,5 +111,23 @@ namespace Vistas
             oListaUsuarios.Show();
             this.Close();
         }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            var currentUser = Vista.CurrentItem as Usuario;
+            if (TrabajarUsuarios.EliminarUsuario(currentUser.Usu_Id))
+            {
+                MessageBox.Show("Eliminado correctamente" + MessageBoxImage.Information);
+                Vista.MoveCurrentToLast();
+                Vista.MoveCurrentToPosition(0);
+                WinAbmUsuario oAbmUsuario = new WinAbmUsuario();
+                oAbmUsuario.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Error al modificar", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
     }
 }
