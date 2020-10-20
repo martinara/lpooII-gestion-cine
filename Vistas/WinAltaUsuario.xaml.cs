@@ -61,9 +61,7 @@ namespace Vistas
 
         private void btnRegistrar_Click(object sender, RoutedEventArgs e)
         {
-            int unRol;
-            
-
+           
             Usuario oUsuario = new Usuario();
             Rol oRol = new Rol();
             oUsuario.Usu_ApellidoNombre = txtApellido.Text;
@@ -81,7 +79,7 @@ namespace Vistas
             oUsuario.Usu_Username = txtUsername.Text;
             oUsuario.Usu_Password = txtPassword.Text;
             TrabajarUsuarios.AgregarUsuario(oUsuario);
-
+            MessageBox.Show("Usuario Agregado correctamente", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
             WinAbmUsuario oAbmUsuario = new WinAbmUsuario();
             oAbmUsuario.Show();
             this.Close();

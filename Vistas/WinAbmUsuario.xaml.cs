@@ -119,9 +119,11 @@ namespace Vistas
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
             var currentUser = Vista.CurrentItem as Usuario;
+            if (MessageBox.Show("Desea Eliminar Usuario?", "Eliminar Usuario", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+     
             if (TrabajarUsuarios.EliminarUsuario(currentUser.Usu_Id))
             {
-                MessageBox.Show("Eliminado correctamente" + MessageBoxImage.Information);
+                MessageBox.Show("Usuario Eliminado correctamente", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
                 Vista.MoveCurrentToLast();
                 Vista.MoveCurrentToPosition(0);
                 WinAbmUsuario oAbmUsuario = new WinAbmUsuario();
@@ -155,7 +157,7 @@ namespace Vistas
 
             usuario.Usu_Rol = oRol;
             TrabajarUsuarios.ModificarUsuario(usuario);
-            MessageBox.Show("Usuario Modificado");
+            MessageBox.Show("Usuario Modificado correctamente", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
             WinAbmUsuario oAbmUsuario = new WinAbmUsuario();
             oAbmUsuario.Show();
             this.Close();
