@@ -393,6 +393,12 @@ namespace Vistas {
             return;
             case 15:
             this.btnDelete = ((System.Windows.Controls.Button)(target));
+            
+            #line 57 "..\..\..\WinAbmUsuario.xaml"
+            this.btnDelete.Click += new System.Windows.RoutedEventHandler(this.btnDelete_Click);
+            
+            #line default
+            #line hidden
             return;
             case 16:
             this.btnEdit = ((System.Windows.Controls.Button)(target));

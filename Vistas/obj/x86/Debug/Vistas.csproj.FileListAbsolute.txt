@@ -78,3 +78,5 @@ C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x8
 C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x86\Debug\WinAltaUsuario.g.cs
 C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x86\Debug\WinListaUsuarios.baml
 C:\Users\Martin\Documents\Visual Studio 2010\Projects\LPOO2-GRUPO2\Vistas\obj\x86\Debug\WinListaUsuarios.g.cs
+C:\Users\Miguel Angel 05\Documents\lpooII-gestion-cine\Vistas\obj\x86\Debug\Vistas.exe
+C:\Users\Miguel Angel 05\Documents\lpooII-gestion-cine\Vistas\obj\x86\Debug\Vistas.pdb
