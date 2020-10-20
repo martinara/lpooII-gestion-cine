@@ -47,7 +47,11 @@
             <!-- Inicio cuadro AMB de usuarios -->
             
                 <StackPanel Orientation="Horizontal" Name="stack_content" Margin="130,70,130,70" DataContext="{Binding Source={StaticResource ResourceKey=LIST_USER}}">
-                
+                <!-- Inicio recurso para cargar los comboboxs -->
+                <StackPanel.Resources>
+                    <XmlDataProvider x:Key="combo_rol" Source="/comboboxs/Roles.xml" XPath="/roles"/>
+                </StackPanel.Resources>
+                <!-- Fin recurso para cargar los comboboxs -->
                 <StackPanel Orientation="Vertical">
                     <Button Name="btnFirst" Content="|&lt;" Width="70" Click="btnFirst_Click" />
                     <Button Name="btnPrevious" Content="&lt;" Width="70" Click="btnPrevious_Click" />
@@ -72,7 +76,7 @@
                     <TextBox Name="txtNombre" Text="{Binding Usu_ApellidoNombre}" Width="150" Height="27" Style="{StaticResource ResourceKey=EstiloTxb}" IsEnabled="False"/>
                     <TextBox Name="txtusername" Text="{Binding Usu_Username}" Width="150" Height="27" Style="{StaticResource ResourceKey=EstiloTxb}" KeyDown="txtusername_KeyDown" />
                     <TextBox Name="txtPassword" Text="{Binding Usu_Password}" Width="150" Height="27" Style="{StaticResource ResourceKey=EstiloTxb}" KeyDown="txtPassword_KeyDown" />
-                    <TextBox Name="txtRol" Text="{Binding Usu_Rol.Rol_Descripcion}" Width="150" Height="27" Style="{StaticResource ResourceKey=EstiloTxb}" IsEnabled="False"/>
+                    <ComboBox Name="cbxRol" Margin="0,0,0,0" ItemsSource="{Binding Source={StaticResource combo_rol},XPath=tipo/@name}" SelectedValue="{Binding Usu_Rol.Rol_Descripcion}" SelectionChanged="cbxRol_SelectionChanged" />
                 </StackPanel>
 
                 <Image Name="image1" Height="150" Source="/Vistas;component/images/logo-central.png" OpacityMask="#C9000000" />

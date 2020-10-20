@@ -142,7 +142,7 @@ namespace Vistas
             usuario.Usu_Username = txtusername.Text;
             usuario.Usu_Password = txtPassword.Text;
             usuario.Usu_ApellidoNombre = txtNombre.Text;
-            if (txtRol.Text == "Administrador")
+            if (cbxRol.SelectedValue.ToString() == "administrador")
             {
                 oRol.Rol_Id = 1;
                 oRol.Rol_Descripcion = "administrador";
@@ -167,6 +167,11 @@ namespace Vistas
         }
 
         private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            btnEdit.IsEnabled = true;
+        }
+
+        private void cbxRol_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             btnEdit.IsEnabled = true;
         }
