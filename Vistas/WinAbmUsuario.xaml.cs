@@ -73,11 +73,13 @@ namespace Vistas
         private void btnFirst_Click(object sender, RoutedEventArgs e)
         {
             Vista.MoveCurrentToFirst();
+            btnEdit.IsEnabled = false;
         }
 
         private void btnLast_Click(object sender, RoutedEventArgs e)
         {
             Vista.MoveCurrentToLast();
+            btnEdit.IsEnabled = false;
         }
 
         private void btnPrevious_Click(object sender, RoutedEventArgs e)
@@ -87,6 +89,7 @@ namespace Vistas
             {
                 Vista.MoveCurrentToLast();
             }
+            btnEdit.IsEnabled = false;
         }
 
         private void btnNext_Click(object sender, RoutedEventArgs e)
@@ -96,6 +99,7 @@ namespace Vistas
             {
                 Vista.MoveCurrentToFirst();
             }
+            btnEdit.IsEnabled = false;
         }
 
         private void btnNew_Click(object sender, RoutedEventArgs e)
@@ -129,5 +133,43 @@ namespace Vistas
                 MessageBox.Show("Error al modificar", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            Usuario usuario = new Usuario();
+            Rol oRol = new Rol();
+            usuario.Usu_Id = Convert.ToInt32(this.txtId.Text);
+            usuario.Usu_Username = txtusername.Text;
+            usuario.Usu_Password = txtPassword.Text;
+            usuario.Usu_ApellidoNombre = txtNombre.Text;
+            if (txtRol.Text == "Administrador")
+            {
+                oRol.Rol_Id = 1;
+                oRol.Rol_Descripcion = "administrador";
+            }
+            else
+            {
+                oRol.Rol_Id = 2;
+                oRol.Rol_Descripcion = "vendedor";
+            }
+
+            usuario.Usu_Rol = oRol;
+            TrabajarUsuarios.ModificarUsuario(usuario);
+            MessageBox.Show("Usuario Modificado");
+            WinAbmUsuario oAbmUsuario = new WinAbmUsuario();
+            oAbmUsuario.Show();
+            this.Close();
+        }
+
+        private void txtusername_KeyDown(object sender, KeyEventArgs e)
+        {
+            btnEdit.IsEnabled = true;
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            btnEdit.IsEnabled = true;
+        }
+
     }
 }

@@ -89,5 +89,24 @@ namespace ClasesBase
 
             }
         }
+
+        public static void ModificarUsuario(Usuario usuario)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.cinesConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "sp_editar_usuario";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@id", usuario.Usu_Id);
+            cmd.Parameters.AddWithValue("@nomUsu", usuario.Usu_Username);
+            cmd.Parameters.AddWithValue("@pass", usuario.Usu_Password);
+            cmd.Parameters.AddWithValue("@ayn", usuario.Usu_ApellidoNombre);
+            cmd.Parameters.AddWithValue("@rol", usuario.Usu_Rol.Rol_Id);
+
+            cnn.Open();
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+        }
     }
 }

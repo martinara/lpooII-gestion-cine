@@ -55,7 +55,7 @@
                     <Button Name="btnLast" Content="&gt;|" Width="70" Click="btnLast_Click" />
                     <Button Name="btnNew" Content="Nuevo" Width="70" Click="btnNew_Click" />
                     <Button Name="btnDelete" Content="Eliminar" Width="70" Click="btnDelete_Click" />
-                    <Button Name="btnEdit" Content="Modificar" Width="70"/>
+                    <Button Name="btnEdit" Content="Modificar" Width="70" Click="btnEdit_Click" IsEnabled="False"/>
                 </StackPanel>
                 
                 <StackPanel Orientation="Vertical">
@@ -67,11 +67,12 @@
                 </StackPanel>
                 
                 <StackPanel Orientation="Vertical">
-                    <TextBox Name="txtId" Text="{Binding Usu_Id}" Width="150" Height="27" Style="{StaticResource ResourceKey=EstiloTxb}"/>
-                    <TextBox Name="txtNombre" Text="{Binding Usu_ApellidoNombre}" Width="150" Height="27" Style="{StaticResource ResourceKey=EstiloTxb}"/>
-                    <TextBox Name="txtusername" Text="{Binding Usu_Username}" Width="150" Height="27" Style="{StaticResource ResourceKey=EstiloTxb}"/>
-                    <TextBox Name="txtPassword" Text="{Binding Usu_Password}" Width="150" Height="27" Style="{StaticResource ResourceKey=EstiloTxb}"/>
-                    <TextBox Name="txtRol" Text="{Binding Usu_Rol.Rol_Descripcion}" Width="150" Height="27" Style="{StaticResource ResourceKey=EstiloTxb}"/>
+                    
+                    <TextBox Name="txtId" Text="{Binding Usu_Id}" Width="150" Height="27" Style="{StaticResource ResourceKey=EstiloTxb}" IsEnabled="False" />
+                    <TextBox Name="txtNombre" Text="{Binding Usu_ApellidoNombre}" Width="150" Height="27" Style="{StaticResource ResourceKey=EstiloTxb}" IsEnabled="False"/>
+                    <TextBox Name="txtusername" Text="{Binding Usu_Username}" Width="150" Height="27" Style="{StaticResource ResourceKey=EstiloTxb}" KeyDown="txtusername_KeyDown" />
+                    <TextBox Name="txtPassword" Text="{Binding Usu_Password}" Width="150" Height="27" Style="{StaticResource ResourceKey=EstiloTxb}" KeyDown="txtPassword_KeyDown" />
+                    <TextBox Name="txtRol" Text="{Binding Usu_Rol.Rol_Descripcion}" Width="150" Height="27" Style="{StaticResource ResourceKey=EstiloTxb}" IsEnabled="False"/>
                 </StackPanel>
 
                 <Image Name="image1" Height="150" Source="/Vistas;component/images/logo-central.png" OpacityMask="#C9000000" />
