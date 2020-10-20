@@ -61,7 +61,7 @@ namespace Vistas
 
         private void btnRegistrar_Click(object sender, RoutedEventArgs e)
         {
-            int unRol;
+            //int unRol;
             
 
             Usuario oUsuario = new Usuario();

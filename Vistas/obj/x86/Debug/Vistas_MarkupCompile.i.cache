@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Miguel Angel 05\Documents\lpooII-gestion-cine\Vistas\obj\x86\Debug\
+C:\Users\RENE\Documents\lpooII-ramaMabel\Vistas\obj\x86\Debug\
 Vistas
 none
 false
 DEBUG;TRACE
-C:\Users\Miguel Angel 05\Documents\lpooII-gestion-cine\Vistas\App.xaml
+C:\Users\RENE\Documents\lpooII-ramaMabel\Vistas\App.xaml
 15-378982469
 
-18841072304
-132105274497
+18417107579
+13842647446
 controlUsuario\Login.xaml;estilosYplantillas\EstilosGenerales.xaml;estilosYplantillas\PlantillasGenerales.xaml;WinAbmUsuario.xaml;WinAltaCliente.xaml;WinAltaPelicula.xaml;WinAltaProyeccion.xaml;WinAltaUsuario.xaml;WinClientes.xaml;WinElegirButaca.xaml;WinListaUsuarios.xaml;WinLogin.xaml;WinMenuAdmin.xaml;WinMenuVendedor.xaml;WinPeliculas.xaml;
 
 False
