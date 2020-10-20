@@ -76,9 +76,10 @@
                     <TextBox Name="txtNombre" Text="{Binding Usu_ApellidoNombre}" Width="150" Height="27" Style="{StaticResource ResourceKey=EstiloTxb}"/>
                     <TextBox Name="txtusername" Text="{Binding Usu_Username}" Width="150" Height="27" Style="{StaticResource ResourceKey=EstiloTxb}" KeyDown="txtusername_KeyDown" />
                     <TextBox Name="txtPassword" Text="{Binding Usu_Password}" Width="150" Height="27" Style="{StaticResource ResourceKey=EstiloTxb}" KeyDown="txtPassword_KeyDown" />
-                  <!--  <TextBox Name="txtRol" Text="{Binding Usu_Rol.Rol_Descripcion}" Width="150" Height="27" Style="{StaticResource ResourceKey=EstiloTxb}"/>
-                -->
-                    <ComboBox Name="cbxRol" Margin="0,0,0,0" ItemsSource="{Binding Source={StaticResource combo_rol},XPath=tipo/@name}"/>
+                 
+                    <ComboBox Name="cbxRol" Margin="0,0,0,0" 
+                              ItemsSource="{Binding Source={StaticResource combo_rol},XPath=tipo/@name}" SelectedIndex="0" />
+                  
                 </StackPanel>
 
                 <Image Name="image1" Height="150" Source="/Vistas;component/images/logo-central.png" OpacityMask="#C9000000" />
