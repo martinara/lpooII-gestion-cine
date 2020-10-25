@@ -30,6 +30,61 @@
     <Style x:Key="PlantillaBtn" TargetType="Button">
         <Setter Property="Template" Value="{StaticResource ResourceKey=plantilla_btn}"></Setter>
     </Style>
-    
+
+    <!-- Plantilla para boton Usuarios-->
+    <ControlTemplate x:Key="plantilla_btnusu" TargetType="{x:Type Button}">
+
+        <Border  x:Name="btn_size_3" BorderBrush="Black" BorderThickness="2" CornerRadius="5" Background="#FF9800" Width="120">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <ContentPresenter Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+        </Border>
+
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="FontSize" Value="13"></Setter>
+                <Setter Property="Width" Value="130" TargetName="btn_size_3"></Setter>
+                <Setter Property="Height" Value="25" TargetName="btn_size_3"></Setter>
+                <Setter Property="Foreground" Value="#FF9800" ></Setter>
+                <Setter Property="Background" Value="Black" TargetName="btn_size_3"></Setter>
+                <Setter Property="FontWeight" Value="Bold" ></Setter>
+                <Setter Property="BorderBrush" Value="#FF9800" TargetName="btn_size_3"></Setter>
+                <Setter Property="BorderThickness" Value="2" TargetName="btn_size_3"></Setter>
+                <Setter Property="Cursor" Value="Hand"></Setter>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <Style x:Key="PlantillaBtnUsu" TargetType="Button">
+        <Setter Property="Template" Value="{StaticResource ResourceKey=plantilla_btnusu}"></Setter>
+    </Style>
+
+    <!--Boton redondo -->
+    <ControlTemplate x:Key="plantilla_btnredondo" TargetType="{x:Type Button}">
+
+        <Border  x:Name="btn_size_2" BorderBrush="Black" BorderThickness="2" CornerRadius="15" Width="25" Height="25" Margin="3">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <ContentPresenter Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+        </Border>
+
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="BorderBrush" Value="#FF9800" TargetName="btn_size_2"></Setter>
+                <Setter Property="BorderThickness" Value="2" TargetName="btn_size_2"></Setter>
+                <Setter Property="Cursor" Value="Hand"></Setter>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <Style x:Key="PlantillaBtnRedondo" TargetType="Button">
+        <Setter Property="Template" Value="{StaticResource ResourceKey=plantilla_btnredondo}"></Setter>
+    </Style>
 
 </ResourceDictionary>

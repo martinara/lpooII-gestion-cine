@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("comboboxs/roles.xml")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/media_skip_forward.png")]
 
 

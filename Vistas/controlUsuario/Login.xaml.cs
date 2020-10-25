@@ -33,5 +33,28 @@ namespace Vistas.controlUsuario
         {
             get { return pwbPassword.Text; }
         }
+
+        private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                pwbPassword.Focus();
+            }
+        }
+
+        private void pwbPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                Window parentWindow = Window.GetWindow(this);   //obtengo la ventada padre(winLogin)
+                Button btnIniciar=(Button)parentWindow.FindName("btnIniciar");   //busco en la ventana el boton iniciar
+                btnIniciar.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));    //hago click en el boton iniciar
+            }
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtUsuario.Focus();
+        }
     }
 }

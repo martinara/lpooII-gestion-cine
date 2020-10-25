@@ -31,7 +31,7 @@ namespace Vistas
             oAbmUsuario.Show();
             this.Close();
         }
-
+        bool winloaded;
         CollectionView Vista;
         ObservableCollection<Usuario> listaUsuarios;
 
@@ -40,6 +40,7 @@ namespace Vistas
             ObjectDataProvider odp = (ObjectDataProvider)this.Resources["LIST_USER"];
             listaUsuarios = odp.Data as ObservableCollection<Usuario>;
             Vista = (CollectionView)CollectionViewSource.GetDefaultView(stack_content.DataContext);
+            winloaded = true;
         }
 
         private void btnPeliculas_Click(object sender, RoutedEventArgs e)
@@ -119,19 +120,21 @@ namespace Vistas
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
             var currentUser = Vista.CurrentItem as Usuario;
-            if (TrabajarUsuarios.EliminarUsuario(currentUser.Usu_Id))
-            {
-                MessageBox.Show("Eliminado correctamente" + MessageBoxImage.Information);
-                Vista.MoveCurrentToLast();
-                Vista.MoveCurrentToPosition(0);
-                WinAbmUsuario oAbmUsuario = new WinAbmUsuario();
-                oAbmUsuario.Show();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Error al modificar", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+            if (MessageBox.Show("Desea Eliminar Usuario?", "Eliminar Usuario", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+
+                if (TrabajarUsuarios.EliminarUsuario(currentUser.Usu_Id))
+                {
+                    MessageBox.Show("Usuario Eliminado correctamente", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
+                    Vista.MoveCurrentToLast();
+                    Vista.MoveCurrentToPosition(0);
+                    WinAbmUsuario oAbmUsuario = new WinAbmUsuario();
+                    oAbmUsuario.Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Error al modificar", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
         }
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
@@ -155,7 +158,7 @@ namespace Vistas
 
             usuario.Usu_Rol = oRol;
             TrabajarUsuarios.ModificarUsuario(usuario);
-            MessageBox.Show("Usuario Modificado");
+            MessageBox.Show("Usuario Modificado correctamente", "Informacion", MessageBoxButton.OK, MessageBoxImage.Information);
             WinAbmUsuario oAbmUsuario = new WinAbmUsuario();
             oAbmUsuario.Show();
             this.Close();
@@ -173,7 +176,11 @@ namespace Vistas
 
         private void cbxRol_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            btnEdit.IsEnabled = true;
+            if (!winloaded)
+            {
+                btnEdit.IsEnabled = true;
+            }
+            winloaded = false;
         }
 
     }

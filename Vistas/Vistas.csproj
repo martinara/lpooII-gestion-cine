@@ -227,6 +227,18 @@
   <ItemGroup>
     <Resource Include="comboboxs\Roles.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\media_skip_backward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\media_seek_backward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\media_seek_forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\media_skip_forward.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
