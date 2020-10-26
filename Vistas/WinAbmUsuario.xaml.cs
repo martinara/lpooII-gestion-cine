@@ -25,12 +25,6 @@ namespace Vistas
             InitializeComponent();
         }
 
-        private void btnAbmUsuarios_Click(object sender, RoutedEventArgs e)
-        {
-            WinAbmUsuario oAbmUsuario = new WinAbmUsuario();
-            oAbmUsuario.Show();
-            this.Close();
-        }
         bool winloaded;
         CollectionView Vista;
         ObservableCollection<Usuario> listaUsuarios;
@@ -41,34 +35,6 @@ namespace Vistas
             listaUsuarios = odp.Data as ObservableCollection<Usuario>;
             Vista = (CollectionView)CollectionViewSource.GetDefaultView(stack_content.DataContext);
             winloaded = true;
-        }
-
-        private void btnPeliculas_Click(object sender, RoutedEventArgs e)
-        {
-            WinPeliculas oPeliculas = new WinPeliculas();
-            oPeliculas.Show();
-            this.Close();
-        }
-
-        private void btnButacas_Click(object sender, RoutedEventArgs e)
-        {
-            WinElegirButaca oElegirButaca = new WinElegirButaca();
-            oElegirButaca.Show();
-            this.Close();
-        }
-
-        private void btnProyecciones_Click(object sender, RoutedEventArgs e)
-        {
-            WinAltaProyeccion oAltaProyeccion = new WinAltaProyeccion();
-            oAltaProyeccion.Show();
-            this.Close();
-        }
-
-        private void btnLogout_Click(object sender, RoutedEventArgs e)
-        {
-            WinLogin menuLogin = new WinLogin();
-            menuLogin.Show();
-            this.Close();
         }
 
         private void btnFirst_Click(object sender, RoutedEventArgs e)
@@ -107,13 +73,6 @@ namespace Vistas
         {
             WinAltaUsuario oAltaUsuario = new WinAltaUsuario();
             oAltaUsuario.Show();
-            this.Close();
-        }
-
-        private void btnListaUsuarios_Click(object sender, RoutedEventArgs e)
-        {
-            WinListaUsuarios oListaUsuarios = new WinListaUsuarios();
-            oListaUsuarios.Show();
             this.Close();
         }
 

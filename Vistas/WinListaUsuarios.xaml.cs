@@ -28,8 +28,6 @@ namespace Vistas
             vistaColeccionFiltrada = Resources["VISTA_USER"] as CollectionViewSource;
         }
 
-        
-
         private void eventVistaUsuario_Filter(object sender, FilterEventArgs e)
         {
             Usuario oUsuario = e.Item as Usuario;
@@ -41,48 +39,6 @@ namespace Vistas
             {
                 e.Accepted = false;
             }
-        }
-
-        private void btnAbmUsuarios_Click(object sender, RoutedEventArgs e)
-        {
-            WinAbmUsuario oAbmUsuario = new WinAbmUsuario();
-            oAbmUsuario.Show();
-            this.Close();
-        }
-
-        private void btnListaUsuarios_Click(object sender, RoutedEventArgs e)
-        {
-            WinListaUsuarios oListaUsuarios = new WinListaUsuarios();
-            oListaUsuarios.Show();
-            this.Close();
-        }
-
-        private void btnPeliculas_Click(object sender, RoutedEventArgs e)
-        {
-            WinPeliculas oPeliculas = new WinPeliculas();
-            oPeliculas.Show();
-            this.Close();
-        }
-
-        private void btnButacas_Click(object sender, RoutedEventArgs e)
-        {
-            WinElegirButaca oElegirButaca = new WinElegirButaca();
-            oElegirButaca.Show();
-            this.Close();
-        }
-
-        private void btnProyecciones_Click(object sender, RoutedEventArgs e)
-        {
-            WinAltaProyeccion oAltaProyeccion = new WinAltaProyeccion();
-            oAltaProyeccion.Show();
-            this.Close();
-        }
-
-        private void btnLogout_Click(object sender, RoutedEventArgs e)
-        {
-            WinLogin menuLogin = new WinLogin();
-            menuLogin.Show();
-            this.Close();
         }
 
         private void txtFiltrarUsername_TextChanged_1(object sender, TextChangedEventArgs e)

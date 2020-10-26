@@ -58,6 +58,12 @@
     <Compile Include="controlUsuario\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="controlUsuario\MenuAdmin.xaml.cs">
+      <DependentUpon>MenuAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controlUsuario\MenuVendedor.xaml.cs">
+      <DependentUpon>MenuVendedor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinAbmUsuario.xaml.cs">
       <DependentUpon>WinAbmUsuario.xaml</DependentUpon>
     </Compile>
@@ -99,6 +105,14 @@
       <DependentUpon>WinPeliculas.xaml</DependentUpon>
     </Compile>
     <Page Include="controlUsuario\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controlUsuario\MenuAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controlUsuario\MenuVendedor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
