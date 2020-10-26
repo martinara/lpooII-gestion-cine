@@ -33,7 +33,9 @@ namespace Vistas
                 oCliente.Cli_Email = txtEmail.Text;
                 oCliente.Cli_Telefono = txtTelefono.Text;
                 TrabajarClientes.AgregarCliente(oCliente);
-                LimpiarCamposCliente();
+                WinAbmCliente oAbmCliente = new WinAbmCliente();
+                oAbmCliente.Show();
+                this.Close();
             }
             else
             {

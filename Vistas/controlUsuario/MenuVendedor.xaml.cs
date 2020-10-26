@@ -24,18 +24,26 @@ namespace Vistas.controlUsuario
             InitializeComponent();
         }
 
-        private void btnClientes_Click(object sender, RoutedEventArgs e)
-        {
-            WinClientes oClientes = new WinClientes();
-            oClientes.Show();
-            Window parentWindow = Window.GetWindow(this);
-            parentWindow.Close();
-        }
-
         private void btnLogout_Click(object sender, RoutedEventArgs e)
         {
             WinLogin menuLogin = new WinLogin();
             menuLogin.Show();
+            Window parentWindow = Window.GetWindow(this);
+            parentWindow.Close();
+        }
+
+        private void btnAbmClientes_Click(object sender, RoutedEventArgs e)
+        {
+            WinAbmCliente oAbmCliente = new WinAbmCliente();
+            oAbmCliente.Show();
+            Window parentWindow = Window.GetWindow(this);
+            parentWindow.Close();
+        }
+
+        private void btnListaCLientes_Click(object sender, RoutedEventArgs e)
+        {
+            WinListaClientes oListaClientes = new WinListaClientes();
+            oListaClientes.Show();
             Window parentWindow = Window.GetWindow(this);
             parentWindow.Close();
         }

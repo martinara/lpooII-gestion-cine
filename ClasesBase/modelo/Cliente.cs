@@ -6,49 +6,61 @@ using System.ComponentModel;
 
 namespace ClasesBase
 {
-    public class Cliente : IDataErrorInfo
+    public class Cliente : IDataErrorInfo, INotifyPropertyChanged
     {
         private string cli_Apellido;
 
         public string Cli_Apellido
         {
             get { return cli_Apellido; }
-            set { cli_Apellido = value; }
+            set { cli_Apellido = value;
+            Notificador(cli_Apellido);
+            }
         }
         private int cli_Dni;
 
         public int Cli_Dni
         {
             get { return cli_Dni; }
-            set { cli_Dni = value; }
+            set { cli_Dni = value;
+            Notificador(cli_Dni.ToString());
+            }
         }
         private string cli_Email;
 
         public string Cli_Email
         {
             get { return cli_Email; }
-            set { cli_Email = value; }
+            set { cli_Email = value;
+            Notificador(cli_Email);
+            }
         }
         private int cli_Id;
 
         public int Cli_Id
         {
             get { return cli_Id; }
-            set { cli_Id = value; }
+            set { cli_Id = value;
+            Notificador(cli_Id.ToString());
+            }
         }
         private string cli_Nombre;
 
         public string Cli_Nombre
         {
             get { return cli_Nombre; }
-            set { cli_Nombre = value; }
+            set { cli_Nombre = value;
+            Notificador(cli_Nombre);
+            }
         }
         private string cli_Telefono;
 
         public string Cli_Telefono
         {
             get { return cli_Telefono; }
-            set { cli_Telefono = value; }
+            set { cli_Telefono = value;
+            Notificador(cli_Telefono);
+            }
         }
 
         //Implementacion de la interface IDataErrorInfo
@@ -127,6 +139,17 @@ namespace ClasesBase
                 return "El valor del campo es obligatorio";
             }
             return null;
+        }
+
+        //Implementacion de la interface INotifyPropertyChanged
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void Notificador(string prop)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(prop));
+            }
         }
     }
 }

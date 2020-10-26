@@ -16,7 +16,10 @@
         <Image Grid.Column="0" Source="/Vistas;component/images/logo-menu.png"/>
 
         <Menu Grid.Column="1" Foreground="White" Background="Transparent" Height="40" Width="790">
-            <MenuItem Header="Clientes" Name="btnClientes" FontSize="20" Width="260" Click="btnClientes_Click" />
+            <MenuItem Header="Clientes" Name="btnClientes" FontSize="20" Width="260">
+                <MenuItem Header="ABM" Name="btnAbmClientes" Foreground="Black" Click="btnAbmClientes_Click" />
+                <MenuItem Header="Listado de clientes" Name="btnListaCLientes" Foreground="Black" Click="btnListaCLientes_Click" />
+            </MenuItem>
             <MenuItem Header="Tickets" Name="btnTickets" FontSize="20" Width="260"/>
             <MenuItem Header="Cerrar Sesion" Name="btnLogout" FontSize="20" Width="260" Click="btnLogout_Click" />
         </Menu>

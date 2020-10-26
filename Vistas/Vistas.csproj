@@ -64,6 +64,9 @@
     <Compile Include="controlUsuario\MenuVendedor.xaml.cs">
       <DependentUpon>MenuVendedor.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinAbmCliente.xaml.cs">
+      <DependentUpon>WinAbmCliente.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinAbmUsuario.xaml.cs">
       <DependentUpon>WinAbmUsuario.xaml</DependentUpon>
     </Compile>
@@ -84,6 +87,9 @@
     </Compile>
     <Compile Include="WinElegirButaca.xaml.cs">
       <DependentUpon>WinElegirButaca.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinListaClientes.xaml.cs">
+      <DependentUpon>WinListaClientes.xaml</DependentUpon>
     </Compile>
     <Compile Include="WinListaUsuarios.xaml.cs">
       <DependentUpon>WinListaUsuarios.xaml</DependentUpon>
@@ -124,6 +130,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="WinAbmCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WinAbmUsuario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -149,6 +159,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WinElegirButaca.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinListaClientes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

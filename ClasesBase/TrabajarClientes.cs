@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data.SqlClient;
 using System.Data;
+using System.Collections.ObjectModel;
 
 namespace ClasesBase
 {
@@ -93,7 +94,51 @@ namespace ClasesBase
             return dt;
         }
 
+        public ObservableCollection<Cliente> TraerClientes()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.cinesConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "select * from Cliente";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+            ObservableCollection<Cliente> listaClientes = new ObservableCollection<Cliente>();
+            cnn.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                Cliente oCliente = new Cliente();
+                oCliente.Cli_Id = (int)reader["CLI_id"];
+                oCliente.Cli_Apellido = (string)reader["CLI_apellido"];
+                oCliente.Cli_Nombre = (string)reader["CLI_nombre"];
+                oCliente.Cli_Dni = (int)reader["CLI_dni"];
+                oCliente.Cli_Email = (string)reader["CLI_email"];
+                oCliente.Cli_Telefono = (string)reader["CLI_telefono"];
+                listaClientes.Add(oCliente);
+            }
+            return listaClientes;
+        }
 
+        public static bool EliminarCliente(int id)
+        {
+            try
+            {
+                SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.cinesConnectionString);
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = @"DELETE Cliente where CLI_id = @id";
+                cmd.Connection = cnn;
+                cmd.Parameters.AddWithValue("@id", id);
+                cnn.Open();
+                cmd.ExecuteNonQuery();
+                cnn.Close();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+
+            }
+        }
 
     }
 }
