@@ -92,5 +92,12 @@ namespace Vistas
                 vistaColeccionFiltrada.Filter += eventVistaUsuario_Filter;
             }
         }
+
+        private void btnVistaPrevia_Click(object sender, RoutedEventArgs e)
+        {
+            VistaPreviaImpresion vistaP = new VistaPreviaImpresion();
+            vistaP.Show();
+            this.Close();
+        }
     }
 }
