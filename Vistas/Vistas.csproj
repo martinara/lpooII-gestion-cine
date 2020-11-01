@@ -64,6 +64,12 @@
     <Compile Include="controlUsuario\MenuVendedor.xaml.cs">
       <DependentUpon>MenuVendedor.xaml</DependentUpon>
     </Compile>
+    <Compile Include="controlUsuario\UCTextBox.xaml.cs">
+      <DependentUpon>UCTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VistaPreviaImpresion.xaml.cs">
+      <DependentUpon>VistaPreviaImpresion.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinAbmCliente.xaml.cs">
       <DependentUpon>WinAbmCliente.xaml</DependentUpon>
     </Compile>
@@ -79,8 +85,14 @@
     <Compile Include="WinAltaProyeccion.xaml.cs">
       <DependentUpon>WinAltaProyeccion.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinAltaTicket.xaml.cs">
+      <DependentUpon>WinAltaTicket.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinAltaUsuario.xaml.cs">
       <DependentUpon>WinAltaUsuario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinButacasMini.xaml.cs">
+      <DependentUpon>WinButacasMini.xaml</DependentUpon>
     </Compile>
     <Compile Include="WinClientes.xaml.cs">
       <DependentUpon>WinClientes.xaml</DependentUpon>
@@ -110,6 +122,9 @@
     <Compile Include="WinPeliculas.xaml.cs">
       <DependentUpon>WinPeliculas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinVentaTicket.xaml.cs">
+      <DependentUpon>WinVentaTicket.xaml</DependentUpon>
+    </Compile>
     <Page Include="controlUsuario\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -122,6 +137,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="controlUsuario\UCTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="estilosYplantillas\EstilosGenerales.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -129,6 +148,10 @@
     <Page Include="estilosYplantillas\PlantillasGenerales.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VistaPreviaImpresion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="WinAbmCliente.xaml">
       <SubType>Designer</SubType>
@@ -150,7 +173,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="WinAltaTicket.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WinAltaUsuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinButacasMini.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -185,6 +216,10 @@
     <Page Include="WinPeliculas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinVentaTicket.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -266,6 +301,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\media_skip_forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\movie_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\error-previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\movie_remove.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

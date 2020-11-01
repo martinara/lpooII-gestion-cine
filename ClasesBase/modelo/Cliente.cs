@@ -17,9 +17,9 @@ namespace ClasesBase
             Notificador(cli_Apellido);
             }
         }
-        private int cli_Dni;
+        private int? cli_Dni;
 
-        public int Cli_Dni
+        public int? Cli_Dni
         {
             get { return cli_Dni; }
             set { cli_Dni = value;
@@ -107,7 +107,7 @@ namespace ClasesBase
 
         private string validar_Dni()
         {
-            if (Cli_Dni == null)
+            if (Cli_Dni==null)
             {
                 return "El valor del campo es obligatorio";
             }

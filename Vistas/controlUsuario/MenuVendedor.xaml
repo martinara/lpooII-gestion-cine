@@ -20,7 +20,7 @@
                 <MenuItem Header="ABM" Name="btnAbmClientes" Foreground="Black" Click="btnAbmClientes_Click" />
                 <MenuItem Header="Listado de clientes" Name="btnListaCLientes" Foreground="Black" Click="btnListaCLientes_Click" />
             </MenuItem>
-            <MenuItem Header="Tickets" Name="btnTickets" FontSize="20" Width="260"/>
+            <MenuItem Header="Tickets" Name="btnTickets" FontSize="20" Width="260" Click="btnTickets_Click"/>
             <MenuItem Header="Cerrar Sesion" Name="btnLogout" FontSize="20" Width="260" Click="btnLogout_Click" />
         </Menu>
 

@@ -44,7 +44,9 @@ namespace Vistas
                 if (login.Username.Equals(oVendedor.Usu_Username) && pass.Equals(oVendedor.Usu_Password))
                 {
                     WinMenuVendedor menuVendedor = new WinMenuVendedor();
+                    menuVendedor.vendedor = "vendedor";//luego se pasara de la base de datos                    
                     menuVendedor.Show();
+                    
                     this.Close();
                 }
                 else

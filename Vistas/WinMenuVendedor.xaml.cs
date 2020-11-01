@@ -18,9 +18,15 @@ namespace Vistas
     /// </summary>
     public partial class WinMenuVendedor : Window
     {
+        public string vendedor;
         public WinMenuVendedor()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            menuVendedor.vendedor = vendedor;
         }
 
     }

@@ -19,6 +19,7 @@ namespace Vistas.controlUsuario
     /// </summary>
     public partial class MenuVendedor : UserControl
     {
+        public string vendedor;
         public MenuVendedor()
         {
             InitializeComponent();
@@ -44,6 +45,15 @@ namespace Vistas.controlUsuario
         {
             WinListaClientes oListaClientes = new WinListaClientes();
             oListaClientes.Show();
+            Window parentWindow = Window.GetWindow(this);
+            parentWindow.Close();
+        }
+
+        private void btnTickets_Click(object sender, RoutedEventArgs e)
+        {
+            WinAltaTicket oWinAltaTicket = new WinAltaTicket();
+            oWinAltaTicket.vendedor = vendedor;
+            oWinAltaTicket.Show();
             Window parentWindow = Window.GetWindow(this);
             parentWindow.Close();
         }

@@ -4,7 +4,7 @@
         xmlns:control="clr-namespace:Vistas.controlUsuario"
         Title="Cinemax - Vendedor" Height="600" Width="900" ResizeMode="NoResize"
         Icon="/Vistas;component/images/icono-cine.ico"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
 
     <Grid>
 

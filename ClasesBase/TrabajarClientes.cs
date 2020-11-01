@@ -140,6 +140,20 @@ namespace ClasesBase
             }
         }
 
+        //TRAE TODOS LOS CLIENTES PARA LLENAR EL COMBO CLIENTES DE WIN ALTA TICKETS (VENTA DE TICKETS)    
+        public static DataTable TraerClientesCombo()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.cinesConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT CLI_id, CAST(CLI_dni AS varchar) + ' - ' + CLI_apellido + ', ' + CLI_nombre + ' - ' + CLI_email AS APENOM FROM Cliente";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            return dt;
+        }
+
     }
 }
 

@@ -25,7 +25,6 @@ namespace Vistas
             InitializeComponent();
         }
 
-        bool winloaded;
         CollectionView Vista;
         ObservableCollection<Cliente> listaClientes;
 
@@ -34,7 +33,6 @@ namespace Vistas
             ObjectDataProvider odp = (ObjectDataProvider)this.Resources["LIST_CLIENTE"];
             listaClientes = odp.Data as ObservableCollection<Cliente>;
             Vista = (CollectionView)CollectionViewSource.GetDefaultView(stack_content.DataContext);
-            winloaded = true;
         }
 
         private void btnFirst_Click(object sender, RoutedEventArgs e)
