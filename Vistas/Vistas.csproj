@@ -110,6 +110,9 @@
     <Compile Include="WinPeliculas.xaml.cs">
       <DependentUpon>WinPeliculas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinVistaPreviaUsuarios.xaml.cs">
+      <DependentUpon>WinVistaPreviaUsuarios.xaml</DependentUpon>
+    </Compile>
     <Page Include="controlUsuario\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -183,6 +186,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WinPeliculas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinVistaPreviaUsuarios.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -266,6 +273,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\media_skip_forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\movie_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\movie_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\error-previous.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

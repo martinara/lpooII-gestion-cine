@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/media_skip_forward.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/error-previous.png")]
 
 

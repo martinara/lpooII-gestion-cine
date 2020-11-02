@@ -52,6 +52,8 @@
                 </ListView>
             </StackPanel>
 
+            <Button Name="btnVistaPrevia" Content="Vista Previa" Margin="60,10,60,0" Style="{StaticResource ResourceKey=PlantillaBtn}" Click="btnVistaPrevia_Click" />
+
         </StackPanel>
 
     </Grid>

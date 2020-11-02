@@ -48,5 +48,12 @@ namespace Vistas
                 vistaColeccionFiltrada.Filter += eventVistaUsuario_Filter;
             }
         }
+
+        private void btnVistaPrevia_Click(object sender, RoutedEventArgs e)
+        {
+            WinVistaPreviaUsuarios oVPUsuarios = new WinVistaPreviaUsuarios();
+            oVPUsuarios.Show();
+            this.Close();
+        }
     }
 }
