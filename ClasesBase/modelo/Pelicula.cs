@@ -44,5 +44,20 @@ namespace ClasesBase
             get { return pel_Duracion; }
             set { pel_Duracion = value; }
         }
+        private string pel_Imagen;
+
+        public string Pel_Imagen
+        {
+            get { return pel_Imagen; }
+            set { pel_Imagen = value; }
+        }
+
+        private string pel_Avance;
+
+        public string Pel_Avance
+        {
+            get { return pel_Avance; }
+            set { pel_Avance = value; }
+        }
     }
 }

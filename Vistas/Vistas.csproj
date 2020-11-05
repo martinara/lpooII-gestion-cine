@@ -101,6 +101,9 @@
     <Compile Include="WinPeliculas.xaml.cs">
       <DependentUpon>WinPeliculas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinVentaTicket.xaml.cs">
+      <DependentUpon>WinVentaTicket.xaml</DependentUpon>
+    </Compile>
     <Page Include="controlUsuario\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -162,6 +165,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WinPeliculas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinVentaTicket.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

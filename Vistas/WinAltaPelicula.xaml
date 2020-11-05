@@ -59,7 +59,19 @@
                 <Label Name="lblClasificacion" Content="Clasificacion" Foreground="White" Margin="0,10,0,0"/>
                 <ComboBox Name="cbxClasificacion" Margin="0,0,0,0" ItemsSource="{Binding Source={StaticResource combo_clasificacion},XPath=tipo/@name}"/>
                 <Label Name="lblError" Foreground="Red" Margin="0,10,0,0"/>
+
+                <!-- Declaración del control image en la primera linea ( que es la linea cero) -->
+                <Image Grid.Row="0" x:Name="controlImage" 
+        HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" 
+        Stretch="Fill" StretchDirection="Both"
+        Margin="10"/>
+                <Button Name="btnSubir" Content="Subir Imagen" Margin="60,10,60,0"  Style="{StaticResource ResourceKey=PlantillaBtn}"/>
+               
+
+               
                 <Button Name="btnRegistrar" Content="Registrar" Margin="60,10,60,0" Click="btnRegistrar_Click" Style="{StaticResource ResourceKey=PlantillaBtn}"/>
+               
+
             </StackPanel>
 
         </StackPanel>
