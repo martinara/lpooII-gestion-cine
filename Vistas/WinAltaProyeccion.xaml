@@ -4,7 +4,7 @@
         xmlns:control="clr-namespace:Vistas.controlUsuario"
         Title="Cinemax - Administrador" Height="600" Width="900" ResizeMode="NoResize"
         Icon="/Vistas;component/images/icono-cine.ico"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" >
 
     <Grid>
 
@@ -24,7 +24,8 @@
                 <Label Name="lblTitulo" Content="ALTA DE PROYECCION" Foreground="White" FontSize="20" HorizontalAlignment="Center"/>
                 <Separator></Separator>
                 <Label Name="lblPelicula" Content="Pelicula" Foreground="White" Margin="0,10,0,0"/>
-                <TextBox Name="txtPelicula" Margin="0,0,0,0" Style="{StaticResource ResourceKey=EstiloTxb}"/>
+                
+                <ComboBox Name="cmbPeli" DisplayMemberPath="NOMPEL" SelectedValuePath="PEL_id" FontSize="13"></ComboBox>
                 <Label Name="lblFecha" Content="Fecha" Foreground="White" Margin="0,10,0,0"/>
                 <DatePicker Name="dtFecha"></DatePicker>
                 <Label Name="lblHorario" Content="Horario" Foreground="White" Margin="0,10,0,0"/>
