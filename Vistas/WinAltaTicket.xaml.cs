@@ -80,6 +80,11 @@ namespace Vistas
             winAltaCli.Show();
             this.Close();
         }
+        
+        private void btnBuscar_Click(object sender, RoutedEventArgs e)
+        {
+            grillaProyeccion.DataContext = TrabajarProyecciones.buscarProyeccion(dtFechaD.Text, dtFechaH.Text);
+        }
 
     }
 }

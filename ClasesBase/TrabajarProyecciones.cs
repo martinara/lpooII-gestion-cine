@@ -60,6 +60,34 @@ namespace ClasesBase
             da.Fill(dt);
             return dt;
         }
+        public static DataTable buscarProyeccion( DateTime desde, DateTime hasta)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.cinesConnectionString);
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "sp_buscarProyeccion";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            SqlParameter bdDesde;
+            bdDesde = new SqlParameter("@desde", SqlDbType.Date);
+            bdDesde.Direction = ParameterDirection.Input;
+            bdDesde.Value = desde;
+
+            SqlParameter bdHasta;
+            bdHasta = new SqlParameter("@hasta", SqlDbType.Date);
+            bdHasta.Direction = ParameterDirection.Input;
+            bdHasta.Value = hasta;
+
+           
+            da.SelectCommand.Parameters.Add(bdDesde);
+            da.SelectCommand.Parameters.Add(bdHasta);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
 
     }
 }

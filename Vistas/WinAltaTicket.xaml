@@ -59,10 +59,10 @@
                 </StackPanel>
                 <StackPanel Cursor="No" Height="134">
                     <Label Name="lblFechaD" Content="Desde" Foreground="White" Width="395" />
-                    <DatePicker Name="dtFechaD" IsEnabled="True" Width="395"></DatePicker>
+                    <DatePicker Name="dtFechaD"  Width="395"></DatePicker>
                     <Label Name="lblFechaH" Content="Hasta" Foreground="White" Width="395" />
-                    <DatePicker Name="dtFechaH" IsEnabled="True" Width="399"></DatePicker>
-                    <Button Name="btnBuscar" Content="BUSCAR" Margin="0,10,20,0" Style="{StaticResource ResourceKey=PlantillaBtnUsu}" Click="btnAlta_Click" />
+                    <DatePicker Name="dtFechaH" Width="399"></DatePicker>
+                    <Button Name="btnBuscar" Content="BUSCAR" Margin="0,10,20,0" Style="{StaticResource ResourceKey=PlantillaBtnUsu}" Click="btnBuscar_Click" />
                     
                 </StackPanel>
                 <ListView Margin="10,20,10,20" Name="grillaProyeccion" ItemsSource="{Binding Source={StaticResource DATA_PROYECCION}}" DataContext="{Binding}" Width="430" Height="112">
