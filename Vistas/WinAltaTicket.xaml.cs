@@ -38,7 +38,7 @@ namespace Vistas
 
         private void btnSeleccionButaca_Click(object sender, RoutedEventArgs e)
         {
-            WinButacasMini oWinButacasMini = new WinButacasMini();
+            WinButacas2D oWinButacasMini = new WinButacas2D();
             oWinButacasMini.ShowDialog();
         }
 

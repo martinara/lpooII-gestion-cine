@@ -16,9 +16,9 @@ namespace Vistas
     /// <summary>
     /// Interaction logic for WinButacasMini.xaml
     /// </summary>
-    public partial class WinButacasMini : Window
+    public partial class WinButacas2D : Window
     {
-        public WinButacasMini()
+        public WinButacas2D()
         {
             InitializeComponent();
         }
