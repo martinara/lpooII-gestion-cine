@@ -94,6 +94,9 @@
     <Compile Include="WinButacas2D.xaml.cs">
       <DependentUpon>WinButacas2D.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinButacas3D.xaml.cs">
+      <DependentUpon>WinButacas3D.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinClientes.xaml.cs">
       <DependentUpon>WinClientes.xaml</DependentUpon>
     </Compile>
@@ -182,6 +185,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WinButacas2D.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinButacas3D.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

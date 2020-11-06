@@ -74,5 +74,12 @@ namespace Vistas
             }
         }
 
+        private void btnAlta_Click(object sender, RoutedEventArgs e)
+        {
+            WinAltaCliente winAltaCli = new WinAltaCliente();
+            winAltaCli.Show();
+            this.Close();
+        }
+
     }
 }
