@@ -29,7 +29,7 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.cinesConnectionString);
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "sp_listar_peliculas";
+            cmd.CommandText = "sp_listar_proyecciones";
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
             ObservableCollection<Proyeccion> listaProyeccion = new ObservableCollection<Proyeccion>();
@@ -40,8 +40,8 @@ namespace ClasesBase
                 Proyeccion oProyec = new Proyeccion();
 
                 oProyec.Pel_Id = (int)reader["ID"];
-                oProyec.Pro_Fecha= (string)reader["FECHA"];
-                oProyec.Pro_Hora = (string)reader["DURACION"];
+               // oProyec.Pro_Fecha= (string)reader["FECHA"];
+                //oProyec.Pro_Hora = (string)reader["HORA"];
                 oProyec.Sal_Id = (int)reader["SALA"];
                
                 listaProyeccion.Add(oProyec);
