@@ -3,10 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:svc="clr-namespace:ClasesBase;assembly=ClasesBase"
         xmlns:control="clr-namespace:Vistas.controlUsuario"
-        Title="Venta de Tickets" Height="500" Width="900" ResizeMode="NoResize"
+        Title="Venta de Tickets" Height="700" Width="900" ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Window.Resources>
-        
+        <ObjectDataProvider x:Key="DATA_CLIENTE" ObjectType="{x:Type svc:TrabajarClientes}" MethodName="listarClientes" />
     </Window.Resources>
     <Grid>
         <Grid.Background>
@@ -53,7 +53,25 @@
 
                     <Image Name="image1" Margin="20" Height="200" Source="/Vistas;component/images/logo-central2.png" OpacityMask="#C9000000" />
 
+                    
+                       
+                    
                 </StackPanel>
+                <StackPanel Cursor="No" >
+                    <Button Name="btnBuscar" Content="BUSCAR" Margin="0,10,20,0" Style="{StaticResource ResourceKey=PlantillaBtnUsu}" Click="btnAlta_Click" />
+                    
+                </StackPanel>
+                <ListView Margin="10,20,10,20" Name="grillaclientes" ItemsSource="{Binding Source={StaticResource DATA_CLIENTE}}" DataContext="{Binding}" Width="273">
+                    <ListView.View>
+                        <GridView>
+                           
+                            <GridViewColumn Width="80" Header="FECHA" DisplayMemberBinding="{Binding Path=APELLIDO}"/>
+                            <GridViewColumn Width="100" Header="HORA" DisplayMemberBinding="{Binding Path=NOMBRE}"/>
+                            <GridViewColumn Width="80" Header="NOMBRE" DisplayMemberBinding="{Binding Path=DNI}"/>
+                           
+                        </GridView>
+                    </ListView.View>
+                </ListView>
             </StackPanel>
             <!-- Fin cuadro de TICKETS -->
 

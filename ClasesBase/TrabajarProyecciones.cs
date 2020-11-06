@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
+using System.Collections.ObjectModel;
 
 namespace ClasesBase
 {
@@ -22,6 +23,30 @@ namespace ClasesBase
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
             return dt;
+        }
+        // Metodo para listar las peliculas cargadas en la BD
+        public ObservableCollection<Proyeccion> listarProyecciones()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.cinesConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "sp_listar_peliculas";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+            ObservableCollection<Proyeccion> listaProyeccion = new ObservableCollection<Proyeccion>();
+            cnn.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                Proyeccion oProyec = new Proyeccion();
+
+                oProyec.Pel_Id = (int)reader["ID"];
+                oProyec.Pro_Fecha= (string)reader["FECHA"];
+                oProyec.Pro_Hora = (string)reader["DURACION"];
+                oProyec.Sal_Id = (int)reader["SALA"];
+               
+                listaProyeccion.Add(oProyec);
+            }
+            return listaProyeccion;
         }
     }
 }

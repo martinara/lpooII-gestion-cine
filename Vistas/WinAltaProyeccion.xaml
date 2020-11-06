@@ -27,7 +27,7 @@
                 
                 <ComboBox Name="cmbPeli" DisplayMemberPath="NOMPEL" SelectedValuePath="PEL_id" FontSize="13"></ComboBox>
                 <Label Name="lblFecha" Content="Fecha" Foreground="White" Margin="0,10,0,0"/>
-                <DatePicker Name="dtFecha"></DatePicker>
+                <DatePicker Name="dtFecha" IsEnabled="True" ></DatePicker>
                 <Label Name="lblHorario" Content="Horario" Foreground="White" Margin="0,10,0,0"/>
                 <TextBox Name="txtHorario" Margin="0,0,0,0" Style="{StaticResource ResourceKey=EstiloTxb}"/>
                 <Label Name="lblSala" Content="Sala" Foreground="White" Margin="0,10,0,0"/>
