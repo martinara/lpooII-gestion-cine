@@ -13,17 +13,17 @@
         </Grid.Background>
 
         <StackPanel>
-
+             
             <!-- Inicio control de usuario barra de menu -->
             <control:MenuAdmin x:Name="menuAdmin"/>
             <!-- Fin control de usuario de la barra de menu -->
 
             <Separator></Separator>
-            
-            <Image Name="image1" Height="530" Source="/Vistas;component/images/logo-central.png" />
+            <Label Content="00:00:00" FontFamily="Verdana" FontWeight="Bold" Height="50" FontSize="36" Foreground="Red"  Name="lbl_Hora" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <Label Content="jueves, 00 de Noviembre de 2020" Height="50" FontSize="32"  Name="lbl_Fecha"   Foreground="Red" FontWeight="Bold" FontFamily="Sitka Text" HorizontalAlignment="Center" />
+            <Image Name="image1" Height="421" Source="/Vistas;component/images/logo-central.png" Width="852" />
             
         </StackPanel>
-
     </Grid>
     
 </Window>

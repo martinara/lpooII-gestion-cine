@@ -4,7 +4,7 @@
         Title="WinVentaTicket" Height="470" Width="585" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
                 
 
-  <FixedDocument>
+ <!-- <FixedDocument>-->
      <PageContent>
         <FixedPage  Height="340" Width="540">
 
@@ -63,7 +63,7 @@
         <!--FIN VENDEDOR-->
       </FixedPage>
     </PageContent>
- </FixedDocument>
+ <!--</FixedDocument>-->
     
 </Window>
 

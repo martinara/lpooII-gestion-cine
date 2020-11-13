@@ -10,6 +10,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Vistas
 {
@@ -18,10 +19,23 @@ namespace Vistas
     /// </summary>
     public partial class WinMenuAdmin : Window
     {
+        DispatcherTimer dis = new DispatcherTimer();
         public WinMenuAdmin()
         {
             InitializeComponent();
+            mostrarTiempo();
         }
 
+        //mostrar fecha y hs//
+        private void mostrarTiempo()
+        {
+            dis.Interval = new TimeSpan(0, 0, 1);
+            dis.Tick += (s, a) =>
+            {
+                lbl_Hora.Content = DateTime.Now.ToLongTimeString();
+                lbl_Fecha.Content = DateTime.Now.ToLongDateString();
+            };
+            dis.Start();
+        }
     }
 }
