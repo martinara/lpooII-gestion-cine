@@ -28,7 +28,7 @@ namespace Vistas
             {
                 Proyeccion oProyeccion = new Proyeccion();
                 oProyeccion.Pro_Fecha = dtFecha.Text;
-                oProyeccion.Pro_Hora = txtHorario.Text;
+                oProyeccion.Pro_Hora = cbxHorario.Text;
                 String pelicula = cmbPeli.Text;
                 String sala = txtSala.Text;
 
@@ -53,7 +53,7 @@ namespace Vistas
         private void LimpiarCamposPelicula()
         {
            
-            txtHorario.Clear();
+           
             txtSala.Clear();
         }
 
