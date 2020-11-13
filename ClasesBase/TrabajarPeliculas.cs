@@ -111,5 +111,18 @@ namespace ClasesBase
             cmd.ExecuteNonQuery();
             cnn.Close();
         }
+        //TRAE TODAS PELICULAS PARA LLENAR EL COMBO    
+        public static DataTable TraerPeliCombo()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.cinesConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT PEL_id, PEL_titulo AS NOMPEL FROM Pelicula";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            return dt;
+        }
     }
 }

@@ -29,7 +29,7 @@ namespace Vistas
                 Proyeccion oProyeccion = new Proyeccion();
                 oProyeccion.Pro_Fecha = dtFecha.Text;
                 oProyeccion.Pro_Hora = txtHorario.Text;
-                String pelicula = txtPelicula.Text;
+                String pelicula = cmbPeli.Text;
                 String sala = txtSala.Text;
 
                 MessageBox.Show("Se guardaron los siguiente datos: \n" +
@@ -45,10 +45,14 @@ namespace Vistas
                 LimpiarCamposPelicula();
             }
         }
-
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            cmbPeli.ItemsSource = TrabajarPeliculas.TraerPeliCombo().DefaultView;
+            cmbPeli.SelectedIndex = 0;
+        }
         private void LimpiarCamposPelicula()
         {
-            txtPelicula.Clear();
+           
             txtHorario.Clear();
             txtSala.Clear();
         }
