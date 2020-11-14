@@ -23,7 +23,7 @@ namespace Vistas
     {
         private CollectionViewSource vistaColeccionFiltrada;        
         ObservableCollection<Pelicula> listaPeliculas;
-
+        string ruta;
         public WinPeliculas()
         {
             InitializeComponent();
@@ -111,7 +111,7 @@ namespace Vistas
             oPelicula.Pel_Duracion = int.Parse(txtDuracion.Text);
             oPelicula.Pel_Genero = cbxGenero.SelectedValue.ToString();
             oPelicula.Pel_Clasificacion = cbxClasificacion.SelectedValue.ToString();
-
+            oPelicula.Pel_imagen = ruta;
             if (lblTituloLateral.Content.ToString() == "AGREGAR PELICULA")
             {
                 //Agregar en DB
@@ -156,6 +156,9 @@ namespace Vistas
                 txtDuracion.Text = peliculaSeleccionada.Pel_Duracion.ToString();
                 cbxClasificacion.SelectedValue = peliculaSeleccionada.Pel_Clasificacion;
                 cbxGenero.SelectedValue = peliculaSeleccionada.Pel_Genero;
+               // Uri resourceUri = new Uri(peliculaSeleccionada.Pel_imagen, UriKind.Absolute);
+                // image1.Source = new BitmapImage(resourceUri);
+                ruta = peliculaSeleccionada.Pel_imagen;
             }
 
         }
@@ -198,6 +201,22 @@ namespace Vistas
                 txtDuracion.Text = peliculaSeleccionada.Pel_Duracion.ToString();
                 cbxClasificacion.SelectedValue = peliculaSeleccionada.Pel_Clasificacion;
                 cbxGenero.SelectedValue = peliculaSeleccionada.Pel_Genero;
+               // Uri resourceUri = new Uri(peliculaSeleccionada.Pel_imagen, UriKind.Absolute);
+               // image1.Source = new BitmapImage(resourceUri);
+                ruta = peliculaSeleccionada.Pel_imagen;
+            }
+        }
+
+        private void btnAbrirImg_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+            Nullable<bool> result = dlg.ShowDialog();
+            if (result == true)
+            {
+                //textBox_Dire.Text = dlg.FileName;
+                Uri resourceUri = new Uri(dlg.FileName, UriKind.Absolute);
+                image1.Source = new BitmapImage(resourceUri);
+                ruta = dlg.FileName;
             }
         }
 

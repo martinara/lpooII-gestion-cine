@@ -32,8 +32,8 @@
                
                 <!--Inicio stack panel navegacion-->
             </StackPanel>
-           
         </Border>
+
         <StackPanel Orientation="Horizontal" Margin="24,135,703,319">
             <MediaElement Name="meAudio"/>
             <Button Name="btnPause" Style="{StaticResource ResourceKey=PlantillaBtnRedondo}" Click="btnPause_Click">
@@ -49,7 +49,9 @@
         <StackPanel Orientation="Vertical" Margin="2,240,711,258">
             <Label  Name="lblName" Content="" FontFamily="Verdana"  Height="30" FontSize="12" Foreground="Red" Width="121" />
             <Button Name="btnLoadSong" Content="Cargar Tema"   Style="{StaticResource PlantillaBtnUsu}" Width="153" Click="btnLoadSong_Click" />
+       
         </StackPanel>
+        
     </Grid>
     
 </Window>

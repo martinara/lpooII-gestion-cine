@@ -40,6 +40,7 @@ namespace ClasesBase
                 oPelicula.Pel_Duracion = (int)reader["DURACION"];
                 oPelicula.Pel_Clasificacion = (string)reader["CLASIFICACION"];
                 oPelicula.Pel_Genero = (string)reader["GENERO"];
+              //  oPelicula.Pel_imagen = (string)reader["IMAGEN"];
 
                 listaPeliculas.Add(oPelicula);
             }
@@ -63,6 +64,7 @@ namespace ClasesBase
             cmd.Parameters.AddWithValue("@duracion", oPelicula.Pel_Duracion);
             cmd.Parameters.AddWithValue("@clasificacion", oPelicula.Pel_Clasificacion);
             cmd.Parameters.AddWithValue("@genero", oPelicula.Pel_Genero);
+            cmd.Parameters.AddWithValue("@imagenP", oPelicula.Pel_imagen);
             cnn.Open();
             id = (int)cmd.ExecuteScalar();
             cnn.Close();
@@ -106,7 +108,7 @@ namespace ClasesBase
             cmd.Parameters.AddWithValue("@duracion", oPelicula.Pel_Duracion);
             cmd.Parameters.AddWithValue("@clasificacion", oPelicula.Pel_Clasificacion);
             cmd.Parameters.AddWithValue("@genero", oPelicula.Pel_Genero);
-
+            cmd.Parameters.AddWithValue("@imagenP", oPelicula.Pel_imagen);
             cnn.Open();
             cmd.ExecuteNonQuery();
             cnn.Close();
