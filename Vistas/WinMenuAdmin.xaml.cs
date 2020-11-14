@@ -11,7 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Threading;
-
+using Microsoft.Win32;
 namespace Vistas
 {
     /// <summary>
@@ -37,5 +37,35 @@ namespace Vistas
             };
             dis.Start();
         }
+
+        private void btnLoadSong_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog myMp3 = new OpenFileDialog();
+            myMp3.Filter = "Musica mp3 (*.mp3)|*.mp3";
+            string pathMp3;
+            if (myMp3.ShowDialog() == true) {
+                pathMp3 = myMp3.FileName;
+                lblName.Content = pathMp3;
+                meAudio.LoadedBehavior = MediaState.Manual;
+                meAudio.Source = new Uri(pathMp3);
+                }
+        }
+
+        private void btnPlay_Click(object sender, RoutedEventArgs e)
+        {
+            meAudio.Play();
+        }
+
+        private void btnStop_Click(object sender, RoutedEventArgs e)
+        {
+            meAudio.Stop();
+        }
+
+        private void btnPause_Click(object sender, RoutedEventArgs e)
+        {
+            meAudio.Pause();
+        }
+
+       
     }
 }
