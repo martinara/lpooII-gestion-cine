@@ -29,9 +29,12 @@ namespace Vistas
                 Proyeccion oProyeccion = new Proyeccion();
                 oProyeccion.Pro_Fecha = dtFecha.Text;
                 oProyeccion.Pro_Hora = cbxHorario.Text;
-                String pelicula = cmbPeli.Text;
+                String pelicula= cmbPeli.Text;
                 String sala = txtSala.Text;
-
+                TrabajarProyecciones.AgregarProyeccion(oProyeccion);
+                WinAltaProyeccion oAbmPro = new WinAltaProyeccion();
+                oAbmPro.Show();
+                this.Close();
                 MessageBox.Show("Se guardaron los siguiente datos: \n" +
                     "\n PELICULA: " + pelicula +
                     "\n FECHA: " + oProyeccion.Pro_Fecha +

@@ -47,7 +47,22 @@ namespace ClasesBase
             da.Fill(dt);
             return dt;
         }
-
+        public static void AgregarProyeccion(Proyeccion proyeccion)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.cinesConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "sp_agregar_proyeccion";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+            cmd.Parameters.AddWithValue("@fecha", proyeccion.Pro_Fecha);
+            cmd.Parameters.AddWithValue("@hora", proyeccion.Pro_Hora);
+            cmd.Parameters.AddWithValue("@idSal", proyeccion.Sal_Id);
+            cmd.Parameters.AddWithValue("@idPel", proyeccion.Pel_Id);
+            
+            cnn.Open();
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+        }
         //COMBO FILTRO POR FECHA DE PROYECCION
         public static DataTable TraerProyeccionesComboFiltroFecha(DateTime? fechaSeleccionada)
         {            
