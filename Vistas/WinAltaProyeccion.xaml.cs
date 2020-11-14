@@ -27,10 +27,13 @@ namespace Vistas
             if (result == MessageBoxResult.Yes)
             {
                 Proyeccion oProyeccion = new Proyeccion();
+                Sala sala = new Sala();
                 oProyeccion.Pro_Fecha = dtFecha.Text;
                 oProyeccion.Pro_Hora = cbxHorario.Text;
                 String pelicula= cmbPeli.Text;
-                String sala = txtSala.Text;
+                //sala. = txtSala.Text;
+                
+                oProyeccion.Sal_Id=sala.Sal_Id;
                 TrabajarProyecciones.AgregarProyeccion(oProyeccion);
                 WinAltaProyeccion oAbmPro = new WinAltaProyeccion();
                 oAbmPro.Show();
@@ -57,7 +60,7 @@ namespace Vistas
         {
            
            
-            txtSala.Clear();
+            //txtSala.Clear();
         }
 
     }
