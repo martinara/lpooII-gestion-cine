@@ -10,6 +10,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ClasesBase;
 
 namespace Vistas
 {
@@ -18,9 +19,12 @@ namespace Vistas
     /// </summary>
     public partial class WinTrailer : Window
     {
-        public WinTrailer()
+        public WinTrailer(Pelicula peliculaSeleccionada)
         {
             InitializeComponent();
+            TransformGroup tg = new TransformGroup();
+            meMovie.RenderTransform = tg;
+            meMovie.Source = new Uri(peliculaSeleccionada.Pel_avance, UriKind.Relative);
         }
 
 
@@ -41,14 +45,11 @@ namespace Vistas
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            //string pathMp4;
            
+
             
-              //  pathMp4 = myMp4.FileName;
-              //  lblName.Content = pathMp3;
-                meMovie.LoadedBehavior = MediaState.Manual;
-              //  meMovie.Source = new Uri(@"C:\Users\RENE\Documents\lpooII-TPFINAL\Vistas\videos\COCO.wmv", UriKind.Relative);
-              //  meMovie.Source = new Uri(@"https://www.youtube.com/watch?v=rb0BN7CfCjU", UriKind.Absolute);
+                
+            
         }
 
         private void btnAtras_Click(object sender, RoutedEventArgs e)
@@ -56,5 +57,8 @@ namespace Vistas
             
             this.Close();
         }
+
+
+       
     }
 }

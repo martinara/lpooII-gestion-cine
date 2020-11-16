@@ -18,6 +18,8 @@ namespace ClasesBase
             oPelicula.Pel_Duracion = 0;
             oPelicula.Pel_Clasificacion = "ATP";
             oPelicula.Pel_Genero = "Accion";
+
+            oPelicula.Pel_avance = "Avance";
             return oPelicula;
         }
         // Metodo para listar las peliculas cargadas en la BD
@@ -40,7 +42,8 @@ namespace ClasesBase
                 oPelicula.Pel_Duracion = (int)reader["DURACION"];
                 oPelicula.Pel_Clasificacion = (string)reader["CLASIFICACION"];
                 oPelicula.Pel_Genero = (string)reader["GENERO"];
-              //  oPelicula.Pel_imagen = (string)reader["IMAGEN"];
+               // oPelicula.Pel_imagen = (string)reader["IMAGEN"];
+                oPelicula.Pel_avance = (string)reader["AVANCE"];
 
                 listaPeliculas.Add(oPelicula);
             }
@@ -65,6 +68,7 @@ namespace ClasesBase
             cmd.Parameters.AddWithValue("@clasificacion", oPelicula.Pel_Clasificacion);
             cmd.Parameters.AddWithValue("@genero", oPelicula.Pel_Genero);
             cmd.Parameters.AddWithValue("@imagenP", oPelicula.Pel_imagen);
+            cmd.Parameters.AddWithValue("@avance", oPelicula.Pel_avance);
             cnn.Open();
             id = (int)cmd.ExecuteScalar();
             cnn.Close();
@@ -126,5 +130,27 @@ namespace ClasesBase
             da.Fill(dt);
             return dt;
         }
+
+
+        public static bool BuscarPelicula(String peliBuscada)
+        {
+            bool aux= true;
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.cinesConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "sp_buscar_pelicula_nombre";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+            cmd.Parameters.AddWithValue("@pattern", peliBuscada);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Cliente oCliente = new Cliente();
+            if (dt.Rows.Count == 0)
+            {
+                aux = false;
+            }
+            return aux;
+        }
+
     }
 }

@@ -13,6 +13,7 @@ using System.Windows.Shapes;
 using ClasesBase;
 using System.Text.RegularExpressions;
 using System.Collections.ObjectModel;
+using Microsoft.Win32;
 
 namespace Vistas
 {
@@ -23,8 +24,10 @@ namespace Vistas
     {
         private CollectionViewSource vistaColeccionFiltrada;        
         ObservableCollection<Pelicula> listaPeliculas;
-        string ruta;
+        string ruta, rutaVideo;
+        Pelicula peliculaSeleccionada = new Pelicula();
         public WinPeliculas()
+
         {
             InitializeComponent();
             vistaColeccionFiltrada = Resources["VISTA_PELICULA"] as CollectionViewSource;
@@ -113,7 +116,11 @@ namespace Vistas
             oPelicula.Pel_Genero = cbxGenero.SelectedValue.ToString();
             oPelicula.Pel_Clasificacion = cbxClasificacion.SelectedValue.ToString();
             oPelicula.Pel_imagen = ruta;
-            if (lblTituloLateral.Content.ToString() == "AGREGAR PELICULA")
+            oPelicula.Pel_avance = rutaVideo;
+            
+          if (lblTituloLateral.Content.ToString() == "AGREGAR PELICULA")
+
+            // if(TrabajarPeliculas.BuscarPelicula(oPelicula.Pel_Titulo) == false)
             {
                 //Agregar en DB
                 Id = TrabajarPeliculas.AgregarPelicula(oPelicula);
@@ -148,7 +155,7 @@ namespace Vistas
         //CUANDO CAMBIO DE PELICULA SELECCIONADA
         private void grillaPeliculas_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {            
-            Pelicula peliculaSeleccionada = grillaPeliculas.SelectedItem as Pelicula;
+             peliculaSeleccionada = grillaPeliculas.SelectedItem as Pelicula;
             if (peliculaSeleccionada != null)
             {
                 btnEliminar.Visibility = Visibility.Visible;
@@ -160,6 +167,7 @@ namespace Vistas
                // Uri resourceUri = new Uri(peliculaSeleccionada.Pel_imagen, UriKind.Absolute);
                 // image1.Source = new BitmapImage(resourceUri);
                 ruta = peliculaSeleccionada.Pel_imagen;
+                rutaVideo = peliculaSeleccionada.Pel_avance;
             }
 
         }
@@ -223,8 +231,18 @@ namespace Vistas
 
         private void btnVerTrailer_Click(object sender, RoutedEventArgs e)
         {
-            WinTrailer wTrailer = new WinTrailer();
+            WinTrailer wTrailer = new WinTrailer(peliculaSeleccionada);
+
             wTrailer.Show();
+        }
+
+        private void btnAbrirTrailer_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Mp4 Files|*.mp4";
+            openFileDialog.ShowDialog();
+
+            rutaVideo = openFileDialog.FileName;
         }
 
     }
