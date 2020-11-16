@@ -93,6 +93,7 @@ namespace Vistas
             txtDuracion.Clear();
             cbxClasificacion.SelectedValue = "ATP";
             cbxGenero.SelectedValue = "Accion";
+            image1.Source = null;
         }
 
         //VALIDACION SOLO NUMEROS (campo duracion)
@@ -218,6 +219,12 @@ namespace Vistas
                 image1.Source = new BitmapImage(resourceUri);
                 ruta = dlg.FileName;
             }
+        }
+
+        private void btnVerTrailer_Click(object sender, RoutedEventArgs e)
+        {
+            WinTrailer wTrailer = new WinTrailer();
+            wTrailer.Show();
         }
 
     }

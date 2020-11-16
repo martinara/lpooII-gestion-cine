@@ -125,6 +125,9 @@
     <Compile Include="WinPeliculas.xaml.cs">
       <DependentUpon>WinPeliculas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinTrailer.xaml.cs">
+      <DependentUpon>WinTrailer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinVentaTicket.xaml.cs">
       <DependentUpon>WinVentaTicket.xaml</DependentUpon>
     </Compile>
@@ -221,6 +224,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WinPeliculas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinTrailer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
